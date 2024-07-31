@@ -1,9 +1,0 @@
-diff --git a/.husky/pre-commit b/.husky/pre-commit
-index 84e907e..d0a7784 100644
---- a/.husky/pre-commit
-+++ b/.husky/pre-commit
-@@ -1 +1 @@
--pnpm
-\ No newline at end of file
-+npx lint-staged
-\ No newline at end of file

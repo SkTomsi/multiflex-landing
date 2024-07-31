@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720337175 +0530	branch: Created from HEAD
-6679fb809617d53104ecc294e5b8e08ccee93377 b98ed21ca54a6797fe560712e9954f87ce0007d1 sktomsi <tomcy48@gmail.com> 1722110716 +0530	commit: better folder structure
-b98ed21ca54a6797fe560712e9954f87ce0007d1 cc1c00c5a2d8fa48e897521de8c0372004a58de6 sktomsi <tomcy48@gmail.com> 1722374295 +0530	commit: add eslint, husky and prettier configs
-cc1c00c5a2d8fa48e897521de8c0372004a58de6 c806afc0493ee62594ea3d59de6b4afbaf2f5b2d sktomsi <tomcy48@gmail.com> 1722374393 +0530	commit: fix incorret command
