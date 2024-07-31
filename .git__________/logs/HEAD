@@ -1,0 +1,16 @@
+0000000000000000000000000000000000000000 28995532546e2c5bab8751c5100594f959a4ff13 sktomsi <tomcy48@gmail.com> 1719122120 +0530	clone: from https://github.com/sktomsi/multiflex.git
+28995532546e2c5bab8751c5100594f959a4ff13 f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1719146191 +0530	commit: hero section web ui ready
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1719146259 +0530	checkout: moving from main to hero-section
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e 27c691cd342adf182dc80ca6e9708ae27c6ada64 sktomsi <tomcy48@gmail.com> 1720334452 +0530	checkout: moving from hero-section to origin/main
+27c691cd342adf182dc80ca6e9708ae27c6ada64 f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1720334510 +0530	checkout: moving from 27c691cd342adf182dc80ca6e9708ae27c6ada64 to main
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720334543 +0530	pull origin main: Fast-forward
+6679fb809617d53104ecc294e5b8e08ccee93377 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720337026 +0530	reset: moving to HEAD
+6679fb809617d53104ecc294e5b8e08ccee93377 f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1720337026 +0530	checkout: moving from main to hero-section
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1720337061 +0530	checkout: moving from hero-section to hero-section
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720337080 +0530	checkout: moving from hero-section to main
+6679fb809617d53104ecc294e5b8e08ccee93377 f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e sktomsi <tomcy48@gmail.com> 1720337107 +0530	checkout: moving from main to hero-section
+f9dd5509c8d5dbb44e2d6fcca95a48105ce2c41e 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720337138 +0530	checkout: moving from hero-section to main
+6679fb809617d53104ecc294e5b8e08ccee93377 6679fb809617d53104ecc294e5b8e08ccee93377 sktomsi <tomcy48@gmail.com> 1720337175 +0530	checkout: moving from main to home-page
+6679fb809617d53104ecc294e5b8e08ccee93377 b98ed21ca54a6797fe560712e9954f87ce0007d1 sktomsi <tomcy48@gmail.com> 1722110716 +0530	commit: better folder structure
+b98ed21ca54a6797fe560712e9954f87ce0007d1 cc1c00c5a2d8fa48e897521de8c0372004a58de6 sktomsi <tomcy48@gmail.com> 1722374295 +0530	commit: add eslint, husky and prettier configs
+cc1c00c5a2d8fa48e897521de8c0372004a58de6 c806afc0493ee62594ea3d59de6b4afbaf2f5b2d sktomsi <tomcy48@gmail.com> 1722374393 +0530	commit: fix incorret command
