@@ -1,13 +1,13 @@
-import ExpertiseScroller from '~/components/sections/ExpertiseScroller';
+import ClientCarousel from '~/components/sections/ClientCarousel';
 import HeroSection from '~/components/sections/HeroSection';
-import ScrollingCardsMobile from '~/components/sections/ScrollingCardsMobile';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ExpertiseScroller />
-      <ScrollingCardsMobile />
+      {/* <ExpertiseScroller /> */}
+      {/* <ScrollingCardsMobile /> */}
+      <ClientCarousel />
     </>
   );
 }
