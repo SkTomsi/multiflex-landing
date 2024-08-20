@@ -1,7 +1,7 @@
 import '~/styles/globals.css';
 import { Manrope } from 'next/font/google';
 
-import Header from '~/components/Header';
+import Header from '~/components/shared/Header';
 
 export const metadata = {
   title: 'Multiflex',
