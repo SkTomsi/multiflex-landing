@@ -1,12 +1,18 @@
+import { ArrowUpRight } from 'lucide-react';
+
 interface IRoundedButton {
   buttonText: string;
 }
 
 function RoundedButton({ buttonText }: IRoundedButton) {
   return (
-    <div className="flex w-fit items-center gap-x-2 rounded-full bg-secondary px-4 py-3">
-      <div className="size-3 rounded-full bg-primary"></div>
-      <div>{buttonText}</div>
+    <div className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-secondary px-4 py-3 transition-all duration-300 ease-in-out">
+      <div className="flex size-3 items-center justify-center rounded-full bg-primary transition-all duration-300 ease-in-out group-hover:size-8 ">
+        <ArrowUpRight className="hidden text-white group-hover:block" />
+      </div>
+      <div className="transition-all duration-300 ease-in-out ">
+        {buttonText}
+      </div>
     </div>
   );
 }

@@ -17,12 +17,15 @@ export default function HeroSection() {
             we blend tradition and innovation to transform spaces with
             precision-crafted modular designs
           </p>
-          <Button className="mt-6" variant={'default'}>
+          <Button
+            className="mt-6 rounded-full transition duration-300"
+            variant={'default'}
+          >
             Discover More
           </Button>
         </div>
 
-        <div className="my-10 h-[510px] w-full border bg-gray-500 drop-shadow-[16px_16px_rgba(0,0,0,1)] md:-ml-[100px] md:h-[700px] md:w-[1200px]">
+        <div className="my-10 h-[510px] w-full  bg-gray-500 drop-shadow-[16px_16px_rgba(0,0,0,1)] md:-ml-[100px] md:h-[700px] md:w-[1200px]">
           <Image
             src={heroImg}
             className="h-full object-cover"
