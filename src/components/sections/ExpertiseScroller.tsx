@@ -31,7 +31,6 @@ export default function ExpertiseScroller() {
           </div>
         </div>
       </div>
-      <div className="h-screen">More room to scroll</div>
     </section>
   );
 }

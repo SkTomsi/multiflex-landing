@@ -1,13 +1,21 @@
-import ExpertiseScroller from '~/components/sections/ExpertiseScroller';
-import HeroSection from '~/components/sections/HeroSection';
-import ScrollingCardsMobile from '~/components/sections/ScrollingCardsMobile';
+import Clients from '~/components/sections/clients';
+import Contact from '~/components/sections/contact';
+import Hero from '~/components/sections/hero';
+import History from '~/components/sections/history-stats';
+import ScopeOfWork from '~/components/sections/scope-of-work';
+import SupplyChain from '~/components/sections/supply-chain';
+import Team from '~/components/sections/team';
 
 export default function HomePage() {
   return (
-    <>
-      <HeroSection />
-      <ExpertiseScroller />
-      <ScrollingCardsMobile />
-    </>
+    <div className="mx-0 flex flex-col items-center">
+      <Hero />
+      <Clients />
+      <SupplyChain />
+      <ScopeOfWork />
+      <History />
+      <Team />
+      <Contact />
+    </div>
   );
 }

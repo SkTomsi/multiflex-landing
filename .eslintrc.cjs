@@ -27,6 +27,9 @@ module.exports = {
   rules: {
     // JavaScript rules
     'prefer-const': 'warn',
+    'prefer-arrow-callback': 'error',
+    'prefer-template': 'error',
+    semi: 'error',
     'no-var': 'warn',
     'no-unused-vars': 'warn',
     'object-shorthand': 'warn',

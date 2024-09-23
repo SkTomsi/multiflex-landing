@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -28,10 +27,25 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
+  h3 {
+    @apply text-3xl font-semibold tracking-tighter text-brand-black md:text-header-text;
   }
-  body {
-    @apply bg-background text-foreground;
+}
+
+@layer components {
+  .sub-header-text {
+    @apply text-base text-brand-grey md:text-sub-text;
+  }
+
+  .container {
+    @apply min-w-full space-y-[40px] border-b border-brand-grey-secondary px-4 py-10 md:space-y-[80px] md:px-14 md:py-20;
+  }
+
+  .stat-text {
+    @apply text-2xl font-bold tracking-tight text-brand-primary md:text-[32px];
+  }
+
+  .sm-subheader-text {
+    @apply text-sm font-semibold text-brand-grey-secondary md:text-base;
   }
 }
