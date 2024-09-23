@@ -5,7 +5,7 @@ import RoundedButton from '../shared/RoundedButton';
 
 export default function SupplyChain() {
   return (
-    <div className="container space-y-5 md:space-y-14">
+    <div className="container space-y-5 md:space-y-[80px]">
       <h3>Supply Chain</h3>
       <div className="md:grid-row-2 flex flex-col gap-5 overflow-clip md:grid md:grid-cols-2">
         <Image

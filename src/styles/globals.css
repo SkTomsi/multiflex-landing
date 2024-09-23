@@ -40,4 +40,12 @@
   .container {
     @apply min-w-full border-b border-brand-grey-secondary px-4 py-10 md:px-14 md:py-20;
   }
+
+  .stat-text {
+    @apply text-2xl font-bold tracking-tight text-brand-primary md:text-[32px];
+  }
+
+  .sm-subheader-text {
+    @apply text-sm font-semibold text-brand-grey-secondary md:text-base;
+  }
 }

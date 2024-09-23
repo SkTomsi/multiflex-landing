@@ -34,6 +34,7 @@ export default function Hero() {
           className="h-[300px] w-full object-cover object-right md:h-auto"
         />
       </div>
+      <div className="absolute inset-0 z-20 bg-[url(/assets/lines.svg)] bg-top opacity-55"></div>
     </div>
   );
 }
