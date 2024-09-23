@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 
 export default function Header() {
   return (
-    <div className="container py-2 md:max-w-[1400px]">
+    <div className="container my-0 py-2 md:max-w-[1400px]">
       <nav className="flex h-[7vh] w-full items-center justify-between">
         <Link href={'/'}>
           <h1 className="text-[20px] font-extrabold tracking-tighter md:text-[24px]">

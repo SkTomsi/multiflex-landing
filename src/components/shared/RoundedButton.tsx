@@ -10,7 +10,7 @@ function RoundedButton({ buttonText }: IRoundedButton) {
       <div className="flex size-3 items-center justify-center rounded-full bg-primary transition-all duration-300 ease-in-out group-hover:size-8 ">
         <ArrowUpRight className="hidden text-white group-hover:block" />
       </div>
-      <div className="transition-all duration-300 ease-in-out ">
+      <div className="text-sm transition-all duration-300 ease-in-out">
         {buttonText}
       </div>
     </div>

@@ -20,9 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${manrope.className}`}>
-      <body className="antialiased">
-        <Header />
-        {children}
+      <body className="min-w-screen min-h-screen antialiased">
+        <div className="flex h-full w-full flex-col">
+          <Header />
+          <main className="flex-grow">{children}</main>
+        </div>
       </body>
     </html>
   );
