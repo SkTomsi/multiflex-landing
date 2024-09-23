@@ -1,6 +1,7 @@
-import '~/styles/globals.css';
 import { Manrope } from 'next/font/google';
+import '~/styles/globals.css';
 
+import Footer from '~/components/sections/footer';
 import Header from '~/components/shared/Header';
 
 export const metadata = {
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div className="flex h-full w-full flex-col">
           <Header />
           <main className="flex-grow">{children}</main>
+          <Footer />
         </div>
       </body>
     </html>

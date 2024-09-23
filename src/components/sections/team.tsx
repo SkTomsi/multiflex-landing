@@ -1,12 +1,12 @@
-import Image, { StaticImageData } from 'next/image';
-import teamImg from '@/assets/team-full.webp';
-import AshokQuadrosImg from '@/assets/ashok-quadros.webp';
 import adtiyaImg from '@/assets/aditya.webp';
 import anandImg from '@/assets/anand-quadros.webp';
+import AshokQuadrosImg from '@/assets/ashok-quadros.webp';
 import glennImg from '@/assets/glenn.webp';
-import reubenImg from '@/assets/reuben.webp';
 import josephImg from '@/assets/joseph.webp';
 import nehaImg from '@/assets/neha.webp';
+import reubenImg from '@/assets/reuben.webp';
+import teamImg from '@/assets/team-full.webp';
+import Image, { StaticImageData } from 'next/image';
 
 const TeamCard = ({
   img,
@@ -38,7 +38,7 @@ const TeamCard = ({
 
 export default function Team() {
   return (
-    <div className="container space-y-[40px] md:space-y-[80px]">
+    <div className="container">
       <h3>These are the people who make sure you get the best experience</h3>
       <div className="flex w-full flex-col gap-6 md:grid md:grid-cols-2 md:gap-20">
         <Image

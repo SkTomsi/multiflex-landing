@@ -1,4 +1,5 @@
 import Clients from '~/components/sections/clients';
+import Contact from '~/components/sections/contact';
 import Hero from '~/components/sections/hero';
 import History from '~/components/sections/history-stats';
 import ScopeOfWork from '~/components/sections/scope-of-work';
@@ -14,6 +15,7 @@ export default function HomePage() {
       <ScopeOfWork />
       <History />
       <Team />
+      <Contact />
     </div>
   );
 }

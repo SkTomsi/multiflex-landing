@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import tvUnit from '@/assets/tv-unit.webp';
+import Image from 'next/image';
 
 export default function History() {
   return (
-    <div className="container space-y-5 md:space-y-14">
+    <div className="container">
       <h3>Family-crafted excellence since 1989</h3>
       <div className="flex flex-col items-center gap-y-5 md:grid md:grid-cols-2 md:gap-40">
         <Image

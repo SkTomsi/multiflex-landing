@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 type FeatureStore = {
   inViewFeature: string | null;
-  // setInViewFeature: (feature: string | null) => void;
+  setInViewFeature: (feature: string | null) => void;
 };
 
 export const useFeatureStore = create<FeatureStore>((set) => ({

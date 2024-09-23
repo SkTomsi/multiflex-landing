@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import kitchenImage from '@/assets/kitchen-image-landscape.webp';
 import kitchenImagePortrait from '@/assets/kitchen-image-portrait.webp';
+import Image from 'next/image';
 import RoundedButton from '../shared/RoundedButton';
 
 export default function SupplyChain() {
   return (
-    <div className="container space-y-5 md:space-y-[80px]">
+    <div className="container">
       <h3>Supply Chain</h3>
       <div className="md:grid-row-2 flex flex-col gap-5 overflow-clip md:grid md:grid-cols-2">
         <Image
