@@ -1,9 +1,9 @@
 'use client';
 
-import { type ReactNode } from 'react';
-import { useFeatureStore } from './store';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { type ReactNode } from 'react';
+import { useFeatureStore } from './store';
 
 type CardProps = {
   title: string;
@@ -21,7 +21,7 @@ const FeatureCard = ({
   return (
     <div
       className={classNames(
-        'absolute inset-0 h-full w-full rounded-2xl bg-red-300 transition-opacity duration-500',
+        'absolute inset-0 h-full w-full  bg-red-300 transition-opacity duration-500',
         inViewFeature === title ? 'opacity-100' : 'opacity-0',
       )}
     >
@@ -39,7 +39,7 @@ export const Residencies = ({ title }: CardProps) => {
           alt="Residencies"
           width={100}
           height={100}
-          className="h-full w-full rounded-2xl object-cover"
+          className="h-full w-full object-cover"
         />
       </div>
     </FeatureCard>

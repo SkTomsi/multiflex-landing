@@ -1,6 +1,5 @@
-import React from 'react';
-import { FeatureTitle } from '../features/title';
 import { Hospitability, Offices, Residencies } from '../features/card';
+import { FeatureTitle } from '../features/title';
 
 export default function ExpertiseScroller() {
   const features = [
@@ -24,7 +23,7 @@ export default function ExpertiseScroller() {
           </ul>
         </div>
         <div className="sticky top-10 flex h-screen w-full items-center">
-          <div className="relative aspect-square h-[400px] w-full rounded-2xl bg-gray-300">
+          <div className="relative aspect-square h-[400px] w-full bg-gray-300">
             {features.map((feature) => (
               <feature.card key={feature.title} title={feature.title} />
             ))}

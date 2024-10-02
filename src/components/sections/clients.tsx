@@ -1,3 +1,5 @@
+import ClientCarousel from '../ClientCarousel';
+
 export default function Clients() {
   return (
     <div className="container">
@@ -11,6 +13,7 @@ export default function Clients() {
           quality.
         </p>
       </div>
+      <ClientCarousel />
     </div>
   );
 }

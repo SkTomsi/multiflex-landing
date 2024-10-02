@@ -82,13 +82,13 @@ export default function Team() {
           name="Anand Quadros"
           designation="Co-Founder (Procurement, Logistics, Supplier Interface)"
         />
-
+        <TeamCard isEmpty />
         <TeamCard
           img={josephImg}
           name="Joseph Noronha"
           designation="Head of Department (QC, Installation and Dispatch)"
         />
-        <TeamCard isEmpty />
+
         <TeamCard
           img={reubenImg}
           name="Reuben Lobo"
