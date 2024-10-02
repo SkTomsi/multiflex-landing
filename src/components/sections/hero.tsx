@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="flex flex-col space-y-8 md:mt-14 md:flex-row md:items-start md:justify-between md:space-y-0">
           <div className="flex w-full gap-x-5 text-xs">
             <p className="w-fit rounded-full  border border-brand-primary px-4 py-1 font-medium text-brand-primary md:py-2 md:text-base">
-              Residential
+              Residences
             </p>
             <p className="w-fit rounded-full border border-brand-primary px-4 py-1 font-medium text-brand-primary md:py-2 md:text-base">
               Commerical
@@ -34,7 +34,7 @@ export default function Hero() {
           className="h-[320px] w-full object-cover object-right md:h-auto"
         />
       </div>
-      <div className="absolute inset-0 z-20 bg-[url('/assets/lines.svg')] bg-top opacity-55"></div>
+      {/* <div className="absolute inset-0 z-20 bg-[url('/assets/lines.svg')] bg-top opacity-55"></div> */}
     </div>
   );
 }
