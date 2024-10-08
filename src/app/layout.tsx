@@ -1,8 +1,9 @@
 import { Manrope } from 'next/font/google';
 import '~/styles/globals.css';
 
-import Footer from '~/components/sections/footer';
+import Footer from '~/components/shared/footer';
 import Header from '~/components/shared/Header';
+import LenisScroll from '~/providers/LenisScroll';
 
 export const metadata = {
   title: 'Multiflex',
@@ -24,7 +25,9 @@ export default function RootLayout({
       <body className="min-w-screen min-h-screen antialiased">
         <div className="flex h-full w-full flex-col">
           <Header />
-          <main className="flex-grow">{children}</main>
+          <main className="flex-grow">
+            <LenisScroll>{children}</LenisScroll>
+          </main>
           <Footer />
         </div>
       </body>
