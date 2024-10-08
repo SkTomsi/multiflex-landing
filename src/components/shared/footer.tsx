@@ -3,8 +3,8 @@ import { Facebook, Instagram, Twitter } from 'lucide-react';
 import Image from 'next/image';
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 ">
-      <div className="divide container mx-auto flex w-full flex-col items-start gap-5 border-none md:p-12 ">
+    <footer className=" text-gray-400 ">
+      <div className="divide container mx-auto flex w-full flex-col items-start gap-5 border-none bg-black md:p-12 ">
         <div className="flex w-full flex-col items-start justify-between gap-5 md:flex-row">
           <div className="mb-6 md:mb-0">
             <Image

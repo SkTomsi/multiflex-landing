@@ -1,19 +1,46 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
 interface IRoundedButton {
   buttonText: string;
 }
 
+const buttonVariants = {
+  initial: {
+    opacity: 0,
+    y: -10,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    duration: 0.8,
+    transition: {
+      type: 'spring',
+      delay: 0.5,
+      stiffness: 100,
+      damping: 30,
+    },
+  },
+};
+
 function RoundedButton({ buttonText }: IRoundedButton) {
   return (
-    <div className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-secondary px-4 py-3 transition-all duration-300 ease-in-out">
+    <motion.div
+      className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-secondary px-4 py-3 transition-all duration-300 ease-in-out"
+      variants={buttonVariants}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true }}
+    >
       <div className="flex size-3 items-center justify-center rounded-full bg-primary transition-all duration-300 ease-in-out group-hover:size-8 ">
         <ArrowUpRight className="hidden text-white group-hover:block" />
       </div>
       <div className="text-sm transition-all duration-300 ease-in-out">
         {buttonText}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

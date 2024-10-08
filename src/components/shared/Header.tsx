@@ -12,7 +12,7 @@ export default function Header() {
           </h1>
         </Link>
         <div className="hidden items-center gap-x-5 text-sm font-bold md:flex">
-          <Link href={''}>
+          <Link href={'/who-we-are'}>
             <Button
               className="rounded-full bg-transparent text-black/50 hover:bg-primary hover:text-white"
               size={'sm'}
