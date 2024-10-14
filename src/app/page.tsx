@@ -2,14 +2,14 @@
 
 import { useScroll } from 'framer-motion';
 import { useRef } from 'react';
-import Clients from '~/components/sections/clients';
-import Contact from '~/components/sections/contact';
-import Hero from '~/components/sections/hero';
-import History from '~/components/sections/history-stats';
-import Projects from '~/components/sections/projects';
-import ScopeOfWork from '~/components/sections/scope-of-work';
-import SupplyChain from '~/components/sections/supply-chain';
-import Team from '~/components/sections/team';
+import Clients from '~/components/sections/home/clients';
+import Contact from '~/components/sections/home/contact';
+import Hero from '~/components/sections/home/hero';
+import History from '~/components/sections/home/history-stats';
+import Projects from '~/components/sections/home/projects';
+import ScopeOfWork from '~/components/sections/home/scope-of-work';
+import SupplyChain from '~/components/sections/home/supply-chain';
+import Team from '~/components/sections/home/team';
 
 export default function HomePage() {
   const container = useRef<HTMLDivElement>(null);

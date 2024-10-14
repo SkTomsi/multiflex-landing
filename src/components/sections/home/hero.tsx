@@ -2,7 +2,7 @@ import heroImage2 from '@/assets/hero-image-2.webp';
 import heroImage from '@/assets/hero-image.webp';
 import { motion, MotionValue, useTransform } from 'framer-motion';
 import Image from 'next/image';
-import { TextGenerateEffect } from '../ui/text-generate-effect';
+import { TextGenerateEffect } from '../../ui/text-generate-effect';
 
 export default function Hero({
   scrollYProgress,

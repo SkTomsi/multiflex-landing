@@ -2,9 +2,9 @@ import kitchenImage from '@/assets/kitchen-image-landscape.webp';
 import kitchenImagePortrait from '@/assets/kitchen-image-portrait.webp';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import RoundedButton from '../shared/RoundedButton';
-import SectionHeader from '../shared/SectionHeader';
-import { TextGenerateEffect } from '../ui/text-generate-effect';
+import RoundedButton from '../../shared/RoundedButton';
+import SectionHeader from '../../shared/SectionHeader';
+import { TextGenerateEffect } from '../../ui/text-generate-effect';
 
 export default function SupplyChain() {
   return (

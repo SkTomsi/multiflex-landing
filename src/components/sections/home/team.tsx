@@ -6,7 +6,11 @@ import josephImg from '@/assets/joseph.webp';
 import nehaImg from '@/assets/neha.webp';
 import reubenImg from '@/assets/reuben.webp';
 import teamImg from '@/assets/team-full.webp';
+import { motion, stagger, useAnimate, useInView } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
+import { useEffect } from 'react';
+import SectionHeader from '~/components/shared/SectionHeader';
+import { TextGenerateEffect } from '~/components/ui/text-generate-effect';
 
 const TeamCard = ({
   img,
@@ -24,7 +28,7 @@ const TeamCard = ({
   }
 
   return (
-    <div className="flex flex-col gap-2 p-4 ">
+    <motion.div className="flex flex-col gap-2 p-4">
       <Image src={img!} alt="ashok quadros" className="w-full object-contain" />
       <div className="p-1">
         <p className="text-base font-semibold text-brand-black">{name}</p>
@@ -32,14 +36,33 @@ const TeamCard = ({
           {designation}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 export default function Team() {
+  const [scope, animate] = useAnimate();
+  const inView = useInView(scope, { once: true });
+
+  useEffect(() => {
+    if (inView) {
+      animate(
+        'div',
+        { opacity: [0, 1], y: [20, 0] },
+        {
+          duration: 0.5,
+          delay: stagger(0.1),
+          type: 'spring',
+          stiffness: 100,
+          damping: 40,
+        },
+      );
+    }
+  }, [animate, scope, inView]);
+
   return (
     <div className="container">
-      <h3>These are the people who make sure you get the best experience</h3>
+      <SectionHeader title="These are the people who make sure you get the best experience" />
       <div className="flex w-full flex-col gap-6 md:grid md:grid-cols-2 md:gap-20">
         <Image
           src={teamImg}
@@ -47,11 +70,14 @@ export default function Team() {
           className="h-full w-full object-contain"
         />
         <div className="flex flex-col gap-y-8 md:gap-y-20 md:px-10">
-          <p className="sub-header-text">
-            At Multiflex, we believe that our team is our greatest asset. Our
+          <TextGenerateEffect
+            filter={false}
+            duration={0.8}
+            className="sub-header-text"
+            words="At Multiflex, we believe that our team is our greatest asset. Our
             success story is written by the hands and minds of dedicated
-            professionals who bring our vision to life every day.
-          </p>
+            professionals who bring our vision to life every day."
+          />
           <div className="grid grid-rows-3 gap-y-2">
             <p className="w-fit rounded-full bg-brand-grey px-16 py-5 text-sm text-white md:px-40 md:py-5">
               Architects
@@ -71,7 +97,10 @@ export default function Team() {
         </div>
       </div>
 
-      <div className="grid w-full grid-cols-2 md:grid-cols-5">
+      <motion.div
+        className="grid w-full grid-cols-2 md:grid-cols-5"
+        ref={scope}
+      >
         <TeamCard
           img={AshokQuadrosImg}
           name="Ashok Quadros"
@@ -111,7 +140,7 @@ export default function Team() {
           designation="Design & Engineering"
         />
         <TeamCard isEmpty />
-      </div>
+      </motion.div>
     </div>
   );
 }
