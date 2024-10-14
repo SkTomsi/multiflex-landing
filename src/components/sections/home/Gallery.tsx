@@ -1,6 +1,6 @@
-import { GalleryImages } from '~/assets/gallery';
-import RoundedButton from '../shared/RoundedButton';
 import Image from 'next/image';
+import { GalleryImages } from '~/assets/gallery';
+import RoundedButton from '../../shared/RoundedButton';
 
 export function Gallery() {
   return (

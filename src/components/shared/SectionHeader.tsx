@@ -15,6 +15,7 @@ export default function SectionHeader({ title }: ISectionHeaderProps) {
         delay: 0.5,
       }}
       viewport={{ once: true }}
+      className="text-balance"
     >
       {title}
     </motion.h3>

@@ -1,6 +1,6 @@
-import ClientCarousel from '../ClientCarousel';
-import SectionHeader from '../shared/SectionHeader';
-import { TextGenerateEffect } from '../ui/text-generate-effect';
+import ClientCarousel from './ClientCarousel';
+import SectionHeader from '../../shared/SectionHeader';
+import { TextGenerateEffect } from '../../ui/text-generate-effect';
 
 export default function Clients() {
   return (

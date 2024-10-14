@@ -1,5 +1,5 @@
-import { Hospitability, Offices, Residencies } from '../features/card';
-import { FeatureTitle } from '../features/title';
+import { Hospitability, Offices, Residencies } from '../../features/card';
+import { FeatureTitle } from '../../features/title';
 
 export default function ExpertiseScroller() {
   const features = [

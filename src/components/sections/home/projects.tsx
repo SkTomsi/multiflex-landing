@@ -3,11 +3,12 @@
 import projectImg from '@/assets/wardrobe.webp';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
+import SectionHeader from '~/components/shared/SectionHeader';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from '../../components/ui/carousel';
+} from '~/components/ui/carousel';
 
 export default function Projects() {
   function ProjectCard() {
@@ -46,7 +47,7 @@ export default function Projects() {
     <div className="container">
       <div className="flex flex-col items-center space-y-5 md:space-y-14">
         <div className="flex w-full sm:justify-start md:justify-end">
-          <h3>Our Premium Projects</h3>
+          <SectionHeader title="Our Premium Projects" />
         </div>
         <Carousel
           className="w-full"
@@ -54,6 +55,7 @@ export default function Projects() {
             Autoplay({
               delay: 4000,
               jump: false,
+              playOnInit: false,
             }),
           ]}
         >
