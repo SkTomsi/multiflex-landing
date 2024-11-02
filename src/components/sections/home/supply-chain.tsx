@@ -9,7 +9,7 @@ import { TextGenerateEffect } from '../../ui/text-generate-effect';
 export default function SupplyChain() {
   return (
     <div className="container">
-      <SectionHeader title="Supply Chain" />
+      <SectionHeader title="Supply Network" />
       <div className="md:grid-row-2 flex flex-col gap-5 overflow-clip md:grid md:grid-cols-2">
         <motion.div
           initial={{ clipPath: 'polygon(100% 0, 100% 0, 0 0, 0 0)' }}
@@ -49,11 +49,12 @@ export default function SupplyChain() {
         <div className="mt-5 flex h-fit w-full flex-col items-end gap-5 md:gap-10">
           <div className="flex w-full flex-col items-start">
             <TextGenerateEffect
+              animation={false}
               words="We are dedicated to crafting furniture using only the finest
               materials. We source our boards, adhesives, and hardware from top
               international suppliers, ensuring each piece meets our high
               standards for durability and aesthetics. By combining the best
-              imported materials with localized manufacturing, we deliver
+              imported materials with in-house manufacturing, we deliver
               superior products that enhance any space with quality and style."
               className="sub-header-text w-5/6"
             />

@@ -62,23 +62,49 @@ export default function Team() {
 
   return (
     <div className="container">
-      <SectionHeader title="These are the people who make sure you get the best experience" />
+      <SectionHeader title="The MultiFlex family: experience, embodied." />
       <div className="flex w-full flex-col gap-6 md:grid md:grid-cols-2 md:gap-20">
-        <Image
-          src={teamImg}
-          alt="team image"
-          className="h-full w-full object-contain"
-        />
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.5,
+            duration: 0.8,
+            type: 'spring',
+            damping: 40,
+            stiffness: 100,
+          }}
+          viewport={{ once: true }}
+        >
+          <Image
+            src={teamImg}
+            alt="team image"
+            className="h-full w-full object-contain"
+          />
+        </motion.div>
         <div className="flex flex-col gap-y-8 md:gap-y-20 md:px-10">
           <TextGenerateEffect
             filter={false}
+            animation={false}
             duration={0.8}
             className="sub-header-text"
             words="At Multiflex, we believe that our team is our greatest asset. Our
             success story is written by the hands and minds of dedicated
             professionals who bring our vision to life every day."
           />
-          <div className="grid grid-rows-3 gap-y-2">
+          <motion.div
+            className="grid grid-rows-3 gap-y-2"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.8,
+              duration: 0.8,
+              type: 'spring',
+              damping: 40,
+              stiffness: 100,
+            }}
+            viewport={{ once: true }}
+          >
             <p className="w-fit rounded-full bg-brand-grey px-16 py-5 text-sm text-white md:px-40 md:py-5">
               Architects
             </p>
@@ -93,7 +119,7 @@ export default function Team() {
                 Artisans
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -131,12 +157,12 @@ export default function Team() {
         <TeamCard isEmpty />
         <TeamCard
           img={glennImg}
-          name="Glenn"
+          name="Glenn Quadros"
           designation="Design & Engineering"
         />
         <TeamCard
           img={adtiyaImg}
-          name="Adtiya"
+          name="Adtiya Quadros"
           designation="Design & Engineering"
         />
         <TeamCard isEmpty />

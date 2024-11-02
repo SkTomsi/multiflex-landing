@@ -8,11 +8,13 @@ export const TextGenerateEffect = ({
   className,
   filter = false,
   duration = 0.5,
+  animation = true,
 }: {
   words: string;
   className?: string;
   filter?: boolean;
   duration?: number;
+  animation?: boolean;
 }) => {
   const [scope, animate] = useAnimate();
   const wordsArray = words.split(' ');
@@ -27,12 +29,12 @@ export const TextGenerateEffect = ({
           filter: filter ? 'blur(0px)' : 'none',
         },
         {
-          duration: duration ? duration : 0.5,
-          delay: stagger(0.1),
+          duration: duration ? duration : 0.1,
+          delay: animation ? stagger(0.1) : 0.8,
         },
       );
     }
-  }, [animate, duration, filter, inView]);
+  }, [animate, duration, filter, inView, animation]);
 
   const textVariants = {
     initial: {

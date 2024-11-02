@@ -76,6 +76,7 @@ export default function History() {
           <div className="sub-header-text space-y-2 border-b border-brand-grey-secondary pb-9 md:pb-14">
             <TextGenerateEffect
               filter={false}
+              animation={false}
               duration={0.8}
               words="Founded by brothers Ashok and Anand Quadros, our journey began
               with the formation of the Quadros group in 1989. We entered panel

@@ -1,4 +1,4 @@
-import heroImage2 from '@/assets/hero-image-2.webp';
+// import heroImage2 from '@/assets/hero-image-2.webp';
 import heroImage from '@/assets/hero-image.webp';
 import { motion, MotionValue, useTransform } from 'framer-motion';
 import Image from 'next/image';
@@ -48,7 +48,7 @@ export default function Hero({
     },
   };
 
-  const pills = ['Residences', 'Commerical', 'Hospitality'];
+  const pills = ['Hospitality', 'Spaces', 'Residences'];
 
   return (
     <motion.div
@@ -104,35 +104,38 @@ export default function Hero({
           </motion.div>
           <TextGenerateEffect
             filter={false}
-            duration={0.8}
             className="sub-header-text"
-            words="Since 1989, Multiflex has been crafting premium furniture with
-            cutting-edge CNC technology. Discover the perfect blend of expertise
-            and advanced finishes, all made with precision and care."
+            words="Since 1989, Multiflex has been at the forefront of premium furniture creation, utilizing cutting-edge CNC technology. Discover the perfect blend of expertise and advanced finishing, all made with unwavering passion and meticulous care."
           />
         </motion.div>
       </div>
-      <motion.div
+      {/* <motion.div
         className="relative mt-8 hidden h-[200vh] flex-col items-center justify-center gap-y-40 md:flex"
         variants={HeroImageVariants}
         initial="initial"
         animate="reveal"
+      > */}
+      <motion.div
+        className="sticky top-0"
+        style={{ scale }}
+        variants={HeroImageVariants}
+        initial="initial"
+        animate="reveal"
       >
-        <motion.div className="sticky top-0" style={{ scale }}>
-          <Image
-            src={heroImage}
-            alt="hero image"
-            className=" h-[320px] w-full object-cover object-right md:h-auto"
-          />
-        </motion.div>
-        <div className="z-30">
+        <Image
+          src={heroImage}
+          alt="hero image"
+          className=" h-full w-full object-cover object-right md:h-auto"
+        />
+      </motion.div>
+      {/* <div className="z-30">
           <Image
             src={heroImage2}
             alt="hero image"
             className=" h-[320px] w-full object-cover object-right md:h-auto"
           />
-        </div>
-      </motion.div>
+        </div> */}
+      {/* </motion.div> */}
       <motion.div
         className="relative mt-8 h-full w-full md:mt-2 md:hidden"
         variants={HeroImageVariants}

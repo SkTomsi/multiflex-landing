@@ -39,6 +39,7 @@ export default function ClientCarousel() {
         variants={logoVariants}
         initial="initial"
         whileInView="animate"
+        viewport={{ once: true }}
       >
         <Image
           src={src}

@@ -12,7 +12,6 @@ export default function SectionHeader({ title }: ISectionHeaderProps) {
       transition={{
         duration: 1,
         ease: 'easeInOut',
-        delay: 0.5,
       }}
       viewport={{ once: true }}
       className="text-balance"
