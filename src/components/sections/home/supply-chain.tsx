@@ -17,9 +17,8 @@ export default function SupplyChain() {
           viewport={{ once: true }}
           transition={{
             duration: 0.8,
-            type: 'tween',
-            delay: 0.5,
-            ease: 'easeInOut',
+            delay: 0.8,
+            easing: 'cubic-bezier(0.77, 0, 0.175, 1)',
           }}
         >
           <Image
@@ -35,9 +34,8 @@ export default function SupplyChain() {
           viewport={{ once: true }}
           transition={{
             duration: 0.8,
-            type: 'spring',
-            damping: 30,
-            delay: 0.5,
+            delay: 1,
+            easing: 'cubic-bezier(0.77, 0, 0.175, 1)',
           }}
         >
           <Image

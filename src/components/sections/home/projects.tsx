@@ -18,14 +18,14 @@ export default function Projects() {
           <p className="text-[24px] font-bold tracking-tighter text-brand-black md:text-[32px]">
             The Wardrobe
           </p>
-          <p className="sub-header-text">
+          {/* <p className="sub-header-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
             pariatur. Excepteur sint occaecat cupidatat non proident
-          </p>
+          </p> */}
           {/* <div className="mt-10 h-[1px] w-full bg-brand-grey-secondary/50" /> */}
           <div className="flex w-full justify-start gap-x-4">
             <p className="rounded-full border border-brand-grey px-8 py-2 text-sm">
@@ -47,7 +47,7 @@ export default function Projects() {
     <div className="container">
       <div className="flex flex-col items-center space-y-5 md:space-y-14">
         <div className="flex w-full sm:justify-start md:justify-end">
-          <SectionHeader title="Our Premium Projects" />
+          <SectionHeader title="Our Projects" />
         </div>
         <Carousel
           className="w-full"

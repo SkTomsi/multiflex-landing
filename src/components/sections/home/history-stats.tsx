@@ -23,8 +23,8 @@ export default function History() {
       <motion.div
         className={cn('-y-20 flex flex-col gap-y-1 p-4 opacity-0', className)}
       >
-        <p className="stat-text">{title}</p>
-        <p className="sm-subheader-text">{description}</p>
+        <p className="stat-text lg:text-6xl">{title}</p>
+        <p className="sm-subheader-text lg:text-2xl">{description}</p>
       </motion.div>
     );
   }
@@ -37,16 +37,6 @@ export default function History() {
     {
       title: '5500+',
       description: 'projects completed till date',
-    },
-    {
-      title: 'All',
-      description: 'happy clients (:P)',
-      className: 'md:border-t md:border-brand-grey-secondary md:pt-20',
-    },
-    {
-      title: '100%',
-      description: 'Customer Satisfaction',
-      className: 'md:border-t md:border-brand-grey-secondary md:pt-20',
     },
   ];
 
@@ -88,7 +78,7 @@ export default function History() {
           </div>
 
           <div
-            className="grid w-full grid-cols-2 md:col-span-2 md:gap-10"
+            className="grid w-full grid-cols-1 md:col-span-2 md:gap-20"
             ref={scope}
           >
             {Stats.map((stat) => (
@@ -96,7 +86,7 @@ export default function History() {
                 key={stat.title}
                 title={stat.title}
                 description={stat.description}
-                className={stat.className!}
+                // className={stat.className!}
               />
             ))}
           </div>

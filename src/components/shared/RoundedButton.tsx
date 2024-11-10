@@ -13,12 +13,11 @@ const buttonVariants = {
     y: -10,
   },
   animate: {
-    opacity: 1,
     y: 0,
+    opacity: 1,
     duration: 0.8,
     transition: {
       type: 'spring',
-      delay: 0.5,
       stiffness: 100,
       damping: 30,
     },

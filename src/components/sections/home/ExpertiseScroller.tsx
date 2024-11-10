@@ -11,7 +11,7 @@ export default function ExpertiseScroller() {
     <section className="hidden md:block">
       {/* Features */}
       <div className="flex w-full items-start p-10">
-        <div className="w-full py-[50vh]">
+        <div className="w-full py-[60vh]">
           <ul>
             {features.map((feature) => (
               <li key={feature.title}>

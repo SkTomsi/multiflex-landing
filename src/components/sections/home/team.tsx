@@ -137,7 +137,6 @@ export default function Team() {
           name="Anand Quadros"
           designation="Co-Founder (Procurement, Logistics, Supplier Interface)"
         />
-        <TeamCard isEmpty />
         <TeamCard
           img={josephImg}
           name="Joseph Noronha"
@@ -149,12 +148,14 @@ export default function Team() {
           name="Reuben Lobo"
           designation="Head of Department (Engineering)"
         />
+        <TeamCard isEmpty />
+        <TeamCard isEmpty />
+        <TeamCard isEmpty />
         <TeamCard
           img={nehaImg}
           name="Neha Jhunhunwala Eidnani"
           designation="Customer Interface and Marketing Head"
         />
-        <TeamCard isEmpty />
         <TeamCard
           img={glennImg}
           name="Glenn Quadros"
@@ -165,7 +166,6 @@ export default function Team() {
           name="Adtiya Quadros"
           designation="Design & Engineering"
         />
-        <TeamCard isEmpty />
       </motion.div>
     </div>
   );

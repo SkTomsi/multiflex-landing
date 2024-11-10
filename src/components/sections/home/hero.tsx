@@ -52,7 +52,7 @@ export default function Hero({
 
   return (
     <motion.div
-      className="-z-30 mb-20 flex w-full flex-col items-center justify-start md:mb-40"
+      className="-z-30 mb-20 flex w-full flex-col items-center justify-start md:mb-12"
       style={{ scale }}
     >
       <div className="container flex flex-col items-center justify-center space-y-8 overflow-hidden border-none md:space-y-14">
@@ -125,18 +125,11 @@ export default function Hero({
         <Image
           src={heroImage}
           alt="hero image"
-          className=" h-full w-full object-cover object-right md:h-auto"
+          className=" h-[320px] w-full object-cover object-right md:h-auto"
         />
       </motion.div>
-      {/* <div className="z-30">
-          <Image
-            src={heroImage2}
-            alt="hero image"
-            className=" h-[320px] w-full object-cover object-right md:h-auto"
-          />
-        </div> */}
       {/* </motion.div> */}
-      <motion.div
+      {/* <motion.div
         className="relative mt-8 h-full w-full md:mt-2 md:hidden"
         variants={HeroImageVariants}
         initial="initial"
@@ -147,7 +140,7 @@ export default function Hero({
           alt="hero image"
           className="h-[320px] w-full object-cover object-right md:h-auto"
         />
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

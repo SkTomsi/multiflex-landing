@@ -24,7 +24,7 @@ export default function Header() {
               Who We Are
             </Button>
           </Link>
-          <Link href={''}>
+          <Link href={'/what-we-do'}>
             <Button
               className="rounded-full bg-transparent text-black/50 hover:bg-primary hover:text-white"
               size={'sm'}
@@ -33,9 +33,11 @@ export default function Header() {
             </Button>
           </Link>
         </div>
-        <Button className="hidden rounded-full bg-transparent text-black/50 hover:bg-primary hover:text-white md:block">
-          Get In Touch
-        </Button>
+        <Link href={'/get-in-touch'}>
+          <Button className="hidden rounded-full bg-transparent text-black/50 hover:bg-primary hover:text-white md:block">
+            Get In Touch
+          </Button>
+        </Link>
         <div className="md:hidden">
           <Menu />
         </div>
