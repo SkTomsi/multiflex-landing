@@ -184,12 +184,12 @@ Our global supplier network enables us to access a wide range of hardware, mater
         <Image
           src={suppliers}
           alt="hero image"
-          className="hidden h-36 object-contain md:block"
+          className="hidden w-full object-contain px-20 md:block"
         />
         <Image
           src={suppliersM}
           alt="hero image"
-          className="flex w-full object-contain md:hidden"
+          className="block w-full object-contain md:hidden"
         />
       </div>
 
