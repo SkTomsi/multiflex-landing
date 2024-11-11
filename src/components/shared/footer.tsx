@@ -46,6 +46,19 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex w-full flex-col gap-10">
+              <div className="flex flex-col gap-5">
+                <p className="text-sm font-bold uppercase text-white">
+                  Our Office
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15088.36669346042!2d73.00219680000001!3d19.145712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11f3c7aa369%3A0x70231cb0cf72839e!2sMultiFlex!5e0!3m2!1sen!2sin!4v1727107760237!5m2!1sen!2sin"
+                  width="200"
+                  height="200"
+                  style={{ border: '0' }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
               <div className="flex w-full flex-col gap-5">
                 <p className="text-sm font-bold uppercase text-white">
                   Socials
@@ -61,19 +74,6 @@ const Footer = () => {
                     <Twitter className="h-5 w-5" />
                   </a>
                 </div>
-              </div>
-              <div className="flex flex-col gap-5">
-                <p className="text-sm font-bold uppercase text-white">
-                  Our Office
-                </p>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15088.36669346042!2d73.00219680000001!3d19.145712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c11f3c7aa369%3A0x70231cb0cf72839e!2sMultiFlex!5e0!3m2!1sen!2sin!4v1727107760237!5m2!1sen!2sin"
-                  width="200"
-                  height="200"
-                  style={{ border: '0' }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
               </div>
             </div>
           </div>

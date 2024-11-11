@@ -1,8 +1,8 @@
 'use client';
 
-import { type ReactNode, useEffect, useRef } from 'react';
-import { useInView } from 'framer-motion';
 import classnames from 'classnames';
+import { useInView } from 'framer-motion';
+import { type ReactNode, useEffect, useRef } from 'react';
 import { useFeatureStore } from './store';
 
 type FeatureTitleProps = {
@@ -31,7 +31,7 @@ export const FeatureTitle = ({ children, title }: FeatureTitleProps) => {
     <p
       ref={ref}
       className={classnames(
-        'py-12 text-6xl font-bold transition-colors',
+        'w-fit py-12 text-6xl font-bold tracking-tighter transition-colors',
         isInView ? 'text-black' : 'text-gray-300',
       )}
     >

@@ -1,5 +1,8 @@
 'use client';
 
+import OImage from '@/assets/IDFC BKC 7.jpg';
+import HImage from '@/assets/Magarpatta Cocoon.jpg';
+import RImage from '@/assets/Residence In Colaba 2.png';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { type ReactNode } from 'react';
@@ -21,7 +24,7 @@ const FeatureCard = ({
   return (
     <div
       className={classNames(
-        'absolute inset-0 h-full w-full  bg-red-300 transition-opacity duration-500',
+        'absolute inset-0 h-full w-full  overflow-hidden bg-red-300 transition-opacity duration-500',
         inViewFeature === title ? 'opacity-100' : 'opacity-0',
       )}
     >
@@ -33,29 +36,21 @@ const FeatureCard = ({
 export const Residencies = ({ title }: CardProps) => {
   return (
     <FeatureCard title={title}>
-      <div className="h-full w-full">
-        <Image
-          src="/image.png"
-          alt="Residencies"
-          width={100}
-          height={100}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <Image src={RImage} alt="Residencies" className="w-full object-cover" />
     </FeatureCard>
   );
 };
 export const Offices = ({ title }: CardProps) => {
   return (
     <FeatureCard title={title}>
-      <span>{title}</span>
+      <Image src={OImage} alt="Residencies" className="h-full object-cover" />
     </FeatureCard>
   );
 };
 export const Hospitability = ({ title }: CardProps) => {
   return (
     <FeatureCard title={title}>
-      <span>{title}</span>
+      <Image src={HImage} alt="Residencies" className="h-full object-cover" />
     </FeatureCard>
   );
 };

@@ -11,10 +11,10 @@ export default function ExpertiseScroller() {
     <section className="hidden md:block">
       {/* Features */}
       <div className="flex w-full items-start p-10">
-        <div className="w-full py-[60vh]">
-          <ul>
+        <div className="w-[50%] py-[40vh]">
+          <ul className="w-fit">
             {features.map((feature) => (
-              <li key={feature.title}>
+              <li key={feature.title} className="w-fit">
                 <FeatureTitle title={feature.title}>
                   {feature.title}
                 </FeatureTitle>
@@ -22,8 +22,8 @@ export default function ExpertiseScroller() {
             ))}
           </ul>
         </div>
-        <div className="sticky top-10 flex h-screen w-full items-center">
-          <div className="relative aspect-square h-[400px] w-full bg-gray-300">
+        <div className="sticky top-0 flex h-screen w-full items-center">
+          <div className="relative aspect-square h-[600px] w-full">
             {features.map((feature) => (
               <feature.card key={feature.title} title={feature.title} />
             ))}
