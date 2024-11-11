@@ -68,12 +68,7 @@ export default function History() {
               filter={false}
               animation={false}
               duration={0.8}
-              words="Founded by brothers Ashok and Anand Quadros, our journey began
-              with the formation of the Quadros group in 1989. We entered panel
-              processing in 1995, and in 2000, we established MultiFlex, our
-              fully-automated CNC factory. Today, we offer multiple processing lines and a dedicated
-              production line for advanced finishes, serving prestigious clients
-              with our expertise in premium modular furniture."
+              words="Founded by brothers Anand and Ashok Quadros, our journey began with the formation of the Quadros group in 1989. Like you, we believe in the importance of family. Which is why we remain proudly family-run, well into our fourth decade."
             />
           </div>
 

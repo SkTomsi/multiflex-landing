@@ -4,11 +4,11 @@
 [-] complete the projects section (3 projects for now)
 [] revamp the team section with the graphics
 [-] add a hi res photo to the bottom section
-[] finish the footer
+[-] finish the footer
 [] add description for the what drives us section
-[] replace the "our quality" image
+[-] replace the "our quality" image
 [] update the supplier logos
-[] remove the timeline
+[-] remove the timeline
 [] add supplier form
 [] complete the gallery section
 [] complete the form functionality

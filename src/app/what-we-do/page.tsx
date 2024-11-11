@@ -2,7 +2,6 @@ import commericial from '@/assets/commericial-image.png';
 import kitchen from '@/assets/kitchen-image.png';
 import wardrobe from '@/assets/wardrobe-image.png';
 import Image from 'next/image';
-import { Gallery } from '~/components/sections/home/Gallery';
 import RoundedButton from '~/components/shared/RoundedButton';
 
 export default function page() {
@@ -114,7 +113,6 @@ export default function page() {
           </div>
         </div>
       </div>
-      <Gallery />
     </div>
   );
 }

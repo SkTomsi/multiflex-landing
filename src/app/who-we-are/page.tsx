@@ -1,8 +1,8 @@
 'use client';
 
-import qualityImg from '@/assets/quality.png';
+import heroImage from '@/assets/hi-res-2.webp';
+import qualityImg from '@/assets/hi-res-3.webp';
 import suppliers from '@/assets/suppliers.png';
-import heroImage from '@/assets/who-we-are-image-1.png';
 import { motion, useAnimate } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -103,9 +103,11 @@ export default function Page() {
     <div className="relative mx-0 flex flex-col items-center">
       <div className="minimal-container flex flex-col gap-x-2">
         <div className="flex w-full flex-col space-x-0 overflow-hidden border-none md:flex-row md:items-start md:space-y-0">
-          <h1 className="text-4xl font-bold tracking-tighter text-brand-black md:w-[50%] md:text-hero-text">
-            A Tradition of Innovation
-          </h1>
+          <div className="md:w-[50%]">
+            <h1 className="w-full text-4xl font-bold tracking-tighter text-brand-black md:text-hero-text">
+              A Tradition of Innovation
+            </h1>
+          </div>
           <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:w-[70%] md:flex-1 md:space-y-4 md:text-base">
             <p className="w-full">
               Born out of a desire to create, innovate and provide premium
@@ -130,7 +132,11 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <Image src={heroImage} alt="hero image" className=" h-full w-full" />
+        <Image
+          src={heroImage}
+          alt="hero image"
+          className="w-full object-contain"
+        />
       </div>
       <div className="minimal-container flex flex-col ">
         <SectionHeader
@@ -154,7 +160,7 @@ export default function Page() {
           ))}
         </div>
       </div>
-      <div className="minimal-container flex flex-col gap-x-2">
+      <div className="minimal-container flex w-full flex-col gap-x-2">
         <SectionHeader
           title="Our Quality"
           description="Our commitment to quality begins at the design stage and extends towards production, assembly and even shipment. Fostering a positive and inclusive work environment allows quality to permeate every single process from the outset. On a technical level, every system and process are reviewed continually."
@@ -180,7 +186,10 @@ Our global supplier network enables us to access a wide range of hardware, mater
           className="h-36 object-contain"
         />
       </div>
-      <div className="minimal-container flex flex-col gap-x-2">
+
+      {/* TODO: Add the timeline or replace it with some other section  */}
+
+      {/* <div className="minimal-container flex flex-col gap-x-2">
         <SectionHeader title="Our Legacy" />
 
         <ol className="items-start     sm:flex">
@@ -283,7 +292,7 @@ Our global supplier network enables us to access a wide range of hardware, mater
             </div>
           </li>
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 }
