@@ -12,6 +12,7 @@ export default function Page() {
   const FeatureCard = ({
     number,
     title,
+    desc,
     // expanded,
     // setExpanded,
     index,
@@ -19,6 +20,7 @@ export default function Page() {
     index: number;
     title: string;
     number: string;
+    desc: string;
     // expanded: boolean;
     // setExpanded: Dispatch<SetStateAction<number | null>>;
   }) => {
@@ -37,20 +39,45 @@ export default function Page() {
     return (
       <motion.div
         ref={scope}
-        className={`flex h-48 w-full flex-1 flex-grow cursor-pointer flex-col justify-between rounded-lg bg-brand-grey-secondary p-6 text-white`}
+        className={`flex h-52 w-full flex-1 flex-grow cursor-pointer flex-col justify-between rounded-lg bg-brand-grey-secondary p-6 text-white`}
         layout="position"
-        onMouseOver={() => {
+        onMouseOver={async () => {
           setExpanded(index);
-          animate(scope.current, { flex: 4, background: '#4E2911' });
+          animate(
+            scope.current,
+            { flex: 4, background: '#4E2911' },
+            { ease: 'easeInOut' },
+          );
+          await animate(
+            '#desc',
+            {
+              opacity: 1,
+              display: 'block',
+            },
+            { ease: 'easeInOut', delay: 0.2 },
+          );
         }}
         onMouseLeave={() => {
-          animate(scope.current, { flex: 1, background: '#C0C0C0' });
+          animate('#desc', {
+            opacity: 0,
+            display: 'none',
+          });
+          animate(
+            scope.current,
+            { flex: 1, background: '#C0C0C0' },
+            { ease: 'easeInOut' },
+          );
           setExpanded(0);
         }}
       >
-        <motion.p layout="position" className="text-4xl font-bold">
-          {number}
-        </motion.p>
+        <motion.div className="flex flex-col gap-4 md:flex-row">
+          <motion.p layout="position" className="text-4xl font-bold">
+            {number}
+          </motion.p>
+          <motion.p id="desc" className="hidden w-full opacity-0">
+            {desc}
+          </motion.p>
+        </motion.div>
         <motion.p layout="position" className="text-2xl font-medium">
           {title}
         </motion.p>
@@ -63,21 +90,25 @@ export default function Page() {
       index: 1,
       number: '01.',
       title: 'Legacy of craftsmanship',
+      desc: ' From the warm curve of a veneered conference table to the seamless finish of a dovetail joint, let us delight you with what can be done.',
     },
     {
       index: 2,
       number: '02.',
       title: 'Collaborative excellence',
+      desc: 'We believe nothing great is ever built in isolation. That’s why we’re constantly in search of the best suppliers – quality and cost-wise – to partner with',
     },
     {
       index: 3,
       number: '03.',
       title: 'Pioneering precision',
+      desc: 'A millimetre matters. It’s the difference between sleek, fully aligned furniture and an imperfect product that compromises the life of your hardware',
     },
     {
       index: 4,
       number: '04.',
-      title: 'steadfast focus on Ethics',
+      title: 'Steadfast focus on ethics',
+      desc: 'We may be a furniture manufacturing firm, but we don’t cut corners. We always deliver what we commit, and with us, you can be sure you’re getting some of the finest furniture on the market',
     },
   ];
 
@@ -154,6 +185,7 @@ export default function Page() {
               key={feature.index}
               number={feature.number}
               title={feature.title}
+              desc={feature.desc}
               // expanded={expanded === feature.index}
               // setExpanded={setExpanded}
               index={feature.index}

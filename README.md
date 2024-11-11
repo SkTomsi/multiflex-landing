@@ -5,9 +5,9 @@
 - [ ] revamp the team section with the graphics
 - [x] finish the footer
 - [x] add a hi res photo to the bottom section
-- [ ] add description for the what drives us section
+- [x] add description for the what drives us section
 - [x] replace the "our quality" image
-- [ ] update the supplier logos
+- [x] update the supplier logos
 - [x] remove the timeline
 - [ ] add supplier form
 - [ ] complete the gallery section
