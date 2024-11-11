@@ -15,8 +15,10 @@ import {
 export default function Projects() {
   function ProjectCard() {
     return (
-      <div className="flex w-full flex-col items-start gap-x-14 space-y-5 md:flex-row md:space-y-4 lg:px-20">
-        <div className="order-2 mt-4 flex-1 space-y-5 md:order-1 md:mt-0 md:space-y-6">
+      <div className="flex w-full flex-col items-start space-y-5 md:space-y-10 lg:px-52">
+        <Image src={projectImg} alt="project-1" className="h-full w-full" />
+
+        <div className="mt-4 flex-1 space-y-5 md:mt-2 md:space-y-5">
           <p className="text-[24px] font-bold tracking-tighter text-brand-black md:text-[32px]">
             The Wardrobe
           </p>
@@ -37,9 +39,6 @@ export default function Projects() {
               2024
             </p>
           </div>
-        </div>
-        <div className="order-1 bg-yellow-500 md:order-2">
-          <Image src={projectImg} alt="project-1" className="h-full w-full" />
         </div>
       </div>
     );

@@ -1,17 +1,18 @@
 'use client';
 
 import LogoImg from '@/assets/Multiflex-Black.svg';
-import { Menu } from 'lucide-react';
+import { AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '../ui/button';
+import MobileMenu from './mobile-menu';
 
 export default function Header() {
   const pathname = usePathname();
 
   return (
-    <div className="container my-0 py-2 md:max-w-[1400px]">
+    <div className="container relative my-0 py-2 md:max-w-[1400px]">
       <nav className="flex h-[7vh] w-full items-center justify-between">
         <Link href={'/'}>
           <Image
@@ -49,7 +50,9 @@ export default function Header() {
           </Button>
         </Link>
         <div className="md:hidden">
-          <Menu />
+          <AnimatePresence>
+            <MobileMenu />
+          </AnimatePresence>
         </div>
       </nav>
     </div>
