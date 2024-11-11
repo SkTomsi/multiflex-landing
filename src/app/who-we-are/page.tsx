@@ -2,6 +2,7 @@
 
 import heroImage from '@/assets/hi-res-2.webp';
 import qualityImg from '@/assets/hi-res-3.webp';
+import suppliersM from '@/assets/suppliers-mobile.png';
 import suppliers from '@/assets/suppliers.png';
 import { motion, useAnimate } from 'framer-motion';
 import Image from 'next/image';
@@ -183,7 +184,12 @@ Our global supplier network enables us to access a wide range of hardware, mater
         <Image
           src={suppliers}
           alt="hero image"
-          className="h-36 object-contain"
+          className="hidden h-36 object-contain md:block"
+        />
+        <Image
+          src={suppliersM}
+          alt="hero image"
+          className="flex w-full object-contain md:hidden"
         />
       </div>
 

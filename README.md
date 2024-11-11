@@ -1,16 +1,16 @@
-[] add expandable client logos
-[] add expandable partner logos
-[] add CTA for "looking to partner with us"
-[-] complete the projects section (3 projects for now)
-[] revamp the team section with the graphics
-[-] add a hi res photo to the bottom section
-[-] finish the footer
-[] add description for the what drives us section
-[-] replace the "our quality" image
-[] update the supplier logos
-[-] remove the timeline
-[] add supplier form
-[] complete the gallery section
-[] complete the form functionality
-[] configure contact form to send emails
-[] add seo
+- [x] add expandable client logos
+- [x] add expandable partner logos
+- [] add CTA for "looking to partner with us"
+- [x] complete the projects section (3 projects for now)
+- [] revamp the team section with the graphics
+- [x] finish the footer
+- [x] add a hi res photo to the bottom section
+- [] add description for the what drives us section
+- [x] replace the "our quality" image
+- [] update the supplier logos
+- [x] remove the timeline
+- [] add supplier form
+- [] complete the gallery section
+- [] complete the form functionality
+- [] configure contact form to send emails
+- [] add seo
