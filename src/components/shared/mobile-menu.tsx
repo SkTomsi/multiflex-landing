@@ -12,6 +12,7 @@ const MobileMenu = () => {
   };
 
   const navItems = [
+    { url: '/', text: 'Home' },
     { url: '/who-we-are', text: 'Who We Are' },
     { url: '/what-we-do', text: 'What We Do' },
     { url: '/get-in-touch', text: 'Get In Touch' },
@@ -68,7 +69,7 @@ const MobileMenu = () => {
               >
                 {navItems.map(({ url, text }, idx) => (
                   <Link href={url} key={idx} onClick={() => setIsOpen(false)}>
-                    <h1 className="flex-1 text-4xl uppercase tracking-wide sm:text-5xl md:text-6xl">
+                    <h1 className="flex-1 text-4xl font-bold uppercase tracking-tighter sm:text-5xl md:text-6xl">
                       {text}
                     </h1>
                   </Link>
