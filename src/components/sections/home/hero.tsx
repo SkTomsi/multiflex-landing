@@ -55,7 +55,7 @@ export default function Hero({
       className="-z-30 mb-20 flex w-full flex-col items-center justify-start md:mb-12"
       style={{ scale }}
     >
-      <div className="container flex flex-col items-center justify-center space-y-8 overflow-hidden border-none md:space-y-14">
+      <div className="container flex flex-col items-start justify-center space-y-8 overflow-hidden border-none md:space-y-14">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function Hero({
         >
           <TextGenerateEffect
             filter={true}
-            words="Unrivalled Craftsmanship and Precision Engineering"
+            words="A TRADITION OF INNOVATION"
             className="overflow-hidden text-4xl font-semibold uppercase tracking-tight text-brand-black  md:text-hero-text"
           />
         </motion.h1>

@@ -1,4 +1,6 @@
+import HiResImage from '@/assets/hi-res-1.webp';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Contact() {
   return (
@@ -16,6 +18,11 @@ export default function Contact() {
           </p>
         </div>
       </div>
+      <Image
+        src={HiResImage}
+        alt="wardrobe image"
+        className="w-full object-contain"
+      />
       <div className="space-y-5 md:flex md:items-center md:justify-between">
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
           To discuss a project with Us,<br></br> Please get in touch:

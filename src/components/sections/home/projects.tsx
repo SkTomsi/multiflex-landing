@@ -8,12 +8,14 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
 } from '~/components/ui/carousel';
 
 export default function Projects() {
   function ProjectCard() {
     return (
-      <div className="flex w-full flex-col gap-x-14 space-y-5 md:flex-row md:space-y-4">
+      <div className="flex w-full flex-col items-start gap-x-14 space-y-5 md:flex-row md:space-y-4 lg:px-20">
         <div className="order-2 mt-4 flex-1 space-y-5 md:order-1 md:mt-0 md:space-y-6">
           <p className="text-[24px] font-bold tracking-tighter text-brand-black md:text-[32px]">
             The Wardrobe
@@ -50,7 +52,7 @@ export default function Projects() {
           <SectionHeader title="Our Projects" />
         </div>
         <Carousel
-          className="w-full"
+          className="w-full max-w-[1200px]"
           plugins={[
             Autoplay({
               delay: 4000,
@@ -73,6 +75,8 @@ export default function Projects() {
               <ProjectCard />
             </CarouselItem>
           </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
         </Carousel>
       </div>
     </div>

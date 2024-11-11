@@ -11,24 +11,24 @@ export function Gallery() {
         </div>
         <RoundedButton buttonText="Our Gallery" />
       </div>
-      <div className="grid grid-cols-2 gap-10 md:grid-cols-3">
-        <div className="grid gap-10">
+      <div className="grid grid-cols-2 gap-20 md:grid-cols-3">
+        <div className="grid gap-20">
           {GalleryImages.slice(0, 5).map((image, i) => (
             <Image
               src={image}
               alt="GalleryImage"
               key={i}
-              className="h-[250px] w-full object-cover"
+              className="h-[350px] w-full object-cover"
             />
           ))}
         </div>
-        <div className="mt-[100px] grid gap-10">
+        <div className="grid gap-20">
           {GalleryImages.slice(6, 11).map((image, i) => (
             <Image
               src={image}
               alt="GalleryImage"
               key={i}
-              className="h-[250px] w-full object-cover"
+              className="h-[350px] w-full object-cover"
             />
           ))}
         </div>

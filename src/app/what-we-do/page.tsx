@@ -1,3 +1,8 @@
+import commericial from '@/assets/commericial-image.png';
+import kitchen from '@/assets/kitchen-image.png';
+import wardrobe from '@/assets/wardrobe-image.png';
+import Image from 'next/image';
+import { Gallery } from '~/components/sections/home/Gallery';
 import RoundedButton from '~/components/shared/RoundedButton';
 
 export default function page() {
@@ -11,20 +16,38 @@ export default function page() {
       </div>
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="relative h-[600px] w-full">
-          <div className="h-full w-full bg-brand-grey-secondary"></div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-brand-black">
+          <div className="h-full w-full ">
+            <Image
+              src={commericial}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
             Commerical Spaces
           </p>
         </div>
         <div className="relative h-[600px] w-full">
-          <div className="h-full w-full bg-brand-grey-secondary"></div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-brand-black">
+          <div className="h-full w-full ">
+            <Image
+              src={kitchen}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
             Kitchens
           </p>
         </div>
         <div className="relative h-[600px] w-full">
-          <div className="h-full w-full bg-brand-grey-secondary"></div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-brand-black">
+          <div className="h-full w-full ">
+            <Image
+              src={wardrobe}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
             Wardrobes
           </p>
         </div>
@@ -91,6 +114,7 @@ export default function page() {
           </div>
         </div>
       </div>
+      <Gallery />
     </div>
   );
 }
