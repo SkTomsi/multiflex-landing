@@ -78,7 +78,7 @@ export default function Page() {
             {desc}
           </motion.p>
         </motion.div>
-        <motion.p layout="position" className="text-2xl font-medium">
+        <motion.p layout="position" className="mt-4 text-2xl font-medium">
           {title}
         </motion.p>
       </motion.div>
@@ -216,12 +216,12 @@ Our global supplier network enables us to access a wide range of hardware, mater
         <Image
           src={suppliers}
           alt="hero image"
-          className="hidden w-full object-contain px-20 md:block"
+          className="hidden w-full object-contain px-20 sm:block"
         />
         <Image
           src={suppliersM}
           alt="hero image"
-          className="block w-full object-contain md:hidden"
+          className="block w-full object-contain sm:hidden"
         />
       </div>
 
