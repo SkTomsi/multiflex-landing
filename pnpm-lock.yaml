@@ -78,12 +78,9 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^7.18.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.6.2)
-      embla-carousel:
-        specifier: ^8.3.1
-        version: 8.3.1
       embla-carousel-autoplay:
         specifier: ^8.3.0
-        version: 8.3.0(embla-carousel@8.3.1)
+        version: 8.3.0(embla-carousel@8.3.0)
       eslint:
         specifier: ^8.57.0
         version: 8.57.1
@@ -677,9 +674,6 @@ packages:
 
   embla-carousel@8.3.0:
     resolution: {integrity: sha512-Ve8dhI4w28qBqR8J+aMtv7rLK89r1ZA5HocwFz6uMB/i5EiC7bGI7y+AM80yAVUJw3qqaZYK7clmZMUR8kM3UA==}
-
-  embla-carousel@8.3.1:
-    resolution: {integrity: sha512-DutFjtEO586XptDn4cwvBJwsR/8fMa4jUk5Jk2g+/elKgu8mdn0Z2sx33g4JskvbLc1/6P8Xg4QlfELGJFcP5A==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -2444,9 +2438,9 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  embla-carousel-autoplay@8.3.0(embla-carousel@8.3.1):
+  embla-carousel-autoplay@8.3.0(embla-carousel@8.3.0):
     dependencies:
-      embla-carousel: 8.3.1
+      embla-carousel: 8.3.0
 
   embla-carousel-react@8.3.0(react@18.3.1):
     dependencies:
@@ -2459,8 +2453,6 @@ snapshots:
       embla-carousel: 8.3.0
 
   embla-carousel@8.3.0: {}
-
-  embla-carousel@8.3.1: {}
 
   emoji-regex@8.0.0: {}
 
