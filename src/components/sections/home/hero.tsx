@@ -48,7 +48,7 @@ export default function Hero({
     },
   };
 
-  const pills = ['Hospitality', 'Spaces', 'Residences'];
+  const pills = ['Hospitality', 'Commercial Spaces', 'Residences'];
 
   return (
     <motion.div

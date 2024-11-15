@@ -16,6 +16,7 @@ const MobileMenu = () => {
     { url: '/who-we-are', text: 'Who We Are' },
     { url: '/what-we-do', text: 'What We Do' },
     { url: '/get-in-touch', text: 'Get In Touch' },
+    { url: '/our-showcase', text: 'Our Showcase' },
   ];
 
   return (

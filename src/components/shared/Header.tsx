@@ -41,6 +41,14 @@ export default function Header() {
               What We Do
             </Button>
           </Link>
+          <Link href={'/our-showcase'}>
+            <Button
+              className={`rounded-full bg-transparent text-black/50 hover:bg-[#c6a477] hover:text-white ${pathname === '/our-showcase' ? 'bg-[#c6a477] text-white' : ''}`}
+              size={'sm'}
+            >
+              Our Showcase
+            </Button>
+          </Link>
         </div>
         <Link href={'/get-in-touch'}>
           <Button
