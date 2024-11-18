@@ -7,7 +7,7 @@ import { useToast } from '~/hooks/use-toast';
 
 const initialState = {
   message: '',
-  status: false,
+  status: '',
 };
 
 export const ContactForm = () => {
@@ -15,13 +15,13 @@ export const ContactForm = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    if (!state.status) {
+    if (state.status === 'false') {
       toast({
         title: 'Oh no! Something went wrong',
         description: state.message,
       });
     }
-    if (state.status) {
+    if (state.status === 'true') {
       toast({
         title: state.message,
         description: "We'll get back to you soon.",

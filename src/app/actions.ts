@@ -28,13 +28,13 @@ export async function SendMailAction(prevState: unknown, formData: unknown) {
 
     return {
       message: 'Hey! Your Mail has been sent successfully.',
-      status: true,
+      status: 'true',
     };
   } else {
     console.error('Failed To send application.');
     return {
       message: 'There was an error sending your mail. Please try again later.',
-      status: false,
+      status: 'false',
     };
   }
 }
