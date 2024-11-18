@@ -8,6 +8,10 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(['development', 'test', 'production']),
+    SMTP_SERVER_USERNAME: z.string(),
+    SMTP_SERVER_PASSWORD: z.string(),
+    SMTP_SERVER_HOST: z.string(),
+    SITE_MAIL_RECIEVER: z.string(),
   },
 
   /**
@@ -25,6 +29,10 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    SMTP_SERVER_USERNAME: process.env.SMTP_SERVER_USERNAME,
+    SMTP_SERVER_PASSWORD: process.env.SMTP_SERVER_PASSWORD,
+    SMTP_SERVER_HOST: process.env.SMTP_SERVER_HOST,
+    SITE_MAIL_RECIEVER: process.env.SITE_MAIL_RECIEVER,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**
