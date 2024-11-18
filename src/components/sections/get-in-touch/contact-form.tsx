@@ -1,12 +1,39 @@
 'use client';
 
+import { useEffect } from 'react';
+import { useFormState } from 'react-dom';
 import { SendMailAction } from '~/app/actions';
+import { useToast } from '~/hooks/use-toast';
+
+const initialState = {
+  message: '',
+  status: false,
+};
 
 export const ContactForm = () => {
+  const [state, formAction] = useFormState(SendMailAction, initialState);
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (!state.status) {
+      toast({
+        title: 'Oh no! Something went wrong',
+        description: state.message,
+      });
+    }
+    if (state.status) {
+      toast({
+        title: state.message,
+        description: "We'll get back to you soon.",
+      });
+    }
+  }, [state, toast]);
+
   function sendMail(formData: FormData) {
+    toast({ title: 'We are sending your mail...', description: 'Please wait' });
     const form = Object.fromEntries(formData.entries());
 
-    SendMailAction(form);
+    formAction(form);
   }
 
   return (

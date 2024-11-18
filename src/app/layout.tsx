@@ -3,6 +3,7 @@ import '~/styles/globals.css';
 
 import Footer from '~/components/shared/footer';
 import Header from '~/components/shared/Header';
+import { Toaster } from '~/components/ui/toaster';
 import LenisScroll from '~/providers/LenisScroll';
 
 export const metadata = {
@@ -28,6 +29,7 @@ export default function RootLayout({
           <main className="flex-grow">
             <LenisScroll>{children}</LenisScroll>
           </main>
+          <Toaster />
           <Footer />
         </div>
       </body>

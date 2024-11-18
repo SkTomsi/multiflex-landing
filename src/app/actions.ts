@@ -9,7 +9,7 @@ interface FormData {
   number: string;
 }
 
-export async function SendMailAction(formData: unknown) {
+export async function SendMailAction(prevState: unknown, formData: unknown) {
   console.log(formData);
 
   const form = formData as FormData;
@@ -25,7 +25,16 @@ export async function SendMailAction(formData: unknown) {
   });
   if (response?.messageId) {
     console.log('Application Submitted Successfully.');
+
+    return {
+      message: 'Hey! Your Mail has been sent successfully.',
+      status: true,
+    };
   } else {
     console.error('Failed To send application.');
+    return {
+      message: 'There was an error sending your mail. Please try again later.',
+      status: false,
+    };
   }
 }
