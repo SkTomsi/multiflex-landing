@@ -103,6 +103,7 @@ export default function Hero({
             ))}
           </motion.div>
           <TextGenerateEffect
+            animation={false}
             filter={false}
             className="sub-header-text"
             words="Since 1989, Multiflex has been at the forefront of premium furniture creation, utilizing cutting-edge CNC technology. Discover the perfect blend of expertise and advanced finishing, all made with unwavering passion and meticulous care."

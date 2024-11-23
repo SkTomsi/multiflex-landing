@@ -1,7 +1,5 @@
-import adtiyaImg from '@/assets/aditya.webp';
 import anandImg from '@/assets/anand-quadros.webp';
 import AshokQuadrosImg from '@/assets/ashok-quadros.webp';
-import glennImg from '@/assets/glenn.webp';
 import josephImg from '@/assets/joseph.webp';
 import nehaImg from '@/assets/neha.webp';
 import reubenImg from '@/assets/reuben.webp';
@@ -130,33 +128,33 @@ export default function Team() {
         <TeamCard
           img={AshokQuadrosImg}
           name="Ashok Quadros"
-          designation="Co-Founder (Customer Interface, Marketing)"
+          designation="Co-Founder"
         />
         <TeamCard
           img={anandImg}
           name="Anand Quadros"
-          designation="Co-Founder (Procurement, Logistics, Supplier Interface)"
-        />
-        <TeamCard
-          img={josephImg}
-          name="Joseph Noronha"
-          designation="Head of Department (QC, Installation and Dispatch)"
+          designation="Co-Founder"
         />
 
         <TeamCard
           img={reubenImg}
           name="Reuben Lobo"
-          designation="Head of Department (Engineering)"
+          designation="Head - Manufacturing"
         />
-        <TeamCard isEmpty />
-        <TeamCard isEmpty />
-        <TeamCard isEmpty />
+        <TeamCard
+          img={josephImg}
+          name="Joseph Noronha"
+          designation="Head - Quality Check"
+        />
+        {/* <TeamCard isEmpty /> */}
+        {/* <TeamCard isEmpty /> */}
+        {/* <TeamCard isEmpty /> */}
         <TeamCard
           img={nehaImg}
           name="Neha Jhunhunwala Eidnani"
-          designation="Customer Interface and Marketing Head"
+          designation="Head - Design & Customer Experience"
         />
-        <TeamCard
+        {/* <TeamCard
           img={glennImg}
           name="Glenn Quadros"
           designation="Design & Engineering"
@@ -165,7 +163,7 @@ export default function Team() {
           img={adtiyaImg}
           name="Adtiya Quadros"
           designation="Design & Engineering"
-        />
+        /> */}
       </motion.div>
     </div>
   );

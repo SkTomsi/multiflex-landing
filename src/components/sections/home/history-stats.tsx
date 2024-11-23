@@ -2,6 +2,7 @@ import tvUnit from '@/assets/tv-unit.webp';
 import { motion, stagger, useAnimate, useInView } from 'framer-motion';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import CountUp from 'react-countup';
 import SectionHeader from '~/components/shared/SectionHeader';
 import { TextGenerateEffect } from '~/components/ui/text-generate-effect';
 import { cn } from '~/lib/utils';
@@ -14,16 +15,20 @@ export default function History() {
     title,
     description,
     className,
+    unit,
   }: {
-    title: string;
+    title: number;
     description: string;
+    unit: string;
     className?: string;
   }) {
     return (
       <motion.div
         className={cn('-y-20 flex flex-col gap-y-1 p-4 opacity-0', className)}
       >
-        <p className="stat-text lg:text-6xl">{title}</p>
+        <p className="stat-text lg:text-6xl">
+          <CountUp end={title} /> {unit}
+        </p>
         <p className="sm-subheader-text lg:text-2xl">{description}</p>
       </motion.div>
     );
@@ -31,11 +36,13 @@ export default function History() {
 
   const Stats = [
     {
-      title: '35+ years',
+      title: 35,
+      unit: 'years',
       description: 'of being pioneers in the industry',
     },
     {
-      title: '5500+',
+      title: 5500,
+      unit: '+',
       description: 'projects completed till date',
     },
   ];
@@ -80,6 +87,7 @@ export default function History() {
               <StatItem
                 key={stat.title}
                 title={stat.title}
+                unit={stat.unit}
                 description={stat.description}
                 // className={stat.className!}
               />

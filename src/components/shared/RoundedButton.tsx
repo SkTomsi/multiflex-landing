@@ -27,7 +27,7 @@ const buttonVariants = {
 function RoundedButton({ buttonText }: IRoundedButton) {
   return (
     <motion.div
-      className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-secondary px-4 py-3 transition-all duration-300 ease-in-out"
+      className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-[#c6a477] px-4 py-3 transition-all duration-300 ease-in-out"
       variants={buttonVariants}
       initial="initial"
       whileInView="animate"

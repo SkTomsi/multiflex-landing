@@ -137,7 +137,7 @@ export default function Page() {
         <div className="flex w-full flex-col space-x-0 overflow-hidden border-none md:flex-row md:items-start md:space-y-0">
           <div className="md:w-[50%]">
             <h1 className="w-full text-4xl font-bold tracking-tighter text-brand-black md:text-hero-text">
-              A Tradition of Innovation
+              Unrivalled Craftsmanship and Precision Engineering
             </h1>
           </div>
           <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:w-[70%] md:flex-1 md:space-y-4 md:text-base">
