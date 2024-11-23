@@ -1,6 +1,9 @@
 import shirtimg from '@/assets/Shirt.webp';
 import heroImg from '@/assets/hero-image-WWD.webp';
+import suppliersM from '@/assets/suppliers-mobile.png';
+import suppliers from '@/assets/suppliers.png';
 import Image from 'next/image';
+import { SectionHeader } from '~/components/shared/SectionHeader';
 
 export default function page() {
   return (
@@ -74,6 +77,26 @@ export default function page() {
               </p>
             </div>
           </div>
+        </div>
+        <div className="minimal-container flex flex-col gap-x-2">
+          <SectionHeader
+            title="Our Partners"
+            description="We partner with suppliers who not only uphold the highest standards of craftsmanship but also share our commitment to ethics, trust, and reliability. Working closely with our supplier network ensures that every single part we produce reflects our dedication to excellence.
+
+By collaborating with suppliers who bring cutting-edge technology and design concepts to the table, we create furniture that meets both functional needs and contemporary design trends.
+
+Our global supplier network enables us to access a wide range of hardware, materials, and expertise. Whether sourcing premium veneers or integrating advanced hardware into our furniture, these partnerships keep us at the forefront of our industry, offering our clients best-in-class products."
+          />
+          <Image
+            src={suppliers}
+            alt="hero image"
+            className="hidden w-full object-contain px-20 sm:block"
+          />
+          <Image
+            src={suppliersM}
+            alt="hero image"
+            className="block w-full object-contain sm:hidden"
+          />
         </div>
       </div>
     </div>

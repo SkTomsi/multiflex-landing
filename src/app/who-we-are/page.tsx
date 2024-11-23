@@ -1,12 +1,12 @@
 'use client';
 
 import heroImage from '@/assets/hero-image-WWA.webp';
-import suppliersM from '@/assets/suppliers-mobile.png';
-import suppliers from '@/assets/suppliers.png';
+
 import { motion, useAnimate } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import Team from '~/components/sections/home/team';
+import { SectionHeader } from '~/components/shared/SectionHeader';
 
 export default function Page() {
   const FeatureCard = ({
@@ -112,28 +112,6 @@ export default function Page() {
     },
   ];
 
-  const SectionHeader = ({
-    title,
-    description,
-    subDesc,
-  }: {
-    title: string;
-    description?: string;
-    subDesc?: string;
-  }) => {
-    return (
-      <div className="mx-auto flex w-full flex-col md:max-w-[1200px] md:flex-row md:items-start md:justify-between">
-        <div className="md:[w-30%] text-base font-bold uppercase text-brand-primary md:text-xl">
-          {title}
-        </div>
-        <div className="sub-header-text mt-4 flex flex-col gap-4 md:mt-0 md:w-[70%] md:text-base">
-          <p>{description}</p>
-          <p>{subDesc}</p>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="relative mx-0 flex flex-col items-center">
       <div className="minimal-container flex flex-col gap-x-2">
@@ -209,26 +187,6 @@ export default function Page() {
         />
       </div> */}
       <Team />
-      <div className="minimal-container flex flex-col gap-x-2">
-        <SectionHeader
-          title="Our Partners"
-          description="We partner with suppliers who not only uphold the highest standards of craftsmanship but also share our commitment to ethics, trust, and reliability. Working closely with our supplier network ensures that every single part we produce reflects our dedication to excellence.
-
-By collaborating with suppliers who bring cutting-edge technology and design concepts to the table, we create furniture that meets both functional needs and contemporary design trends.
-
-Our global supplier network enables us to access a wide range of hardware, materials, and expertise. Whether sourcing premium veneers or integrating advanced hardware into our furniture, these partnerships keep us at the forefront of our industry, offering our clients best-in-class products."
-        />
-        <Image
-          src={suppliers}
-          alt="hero image"
-          className="hidden w-full object-contain px-20 sm:block"
-        />
-        <Image
-          src={suppliersM}
-          alt="hero image"
-          className="block w-full object-contain sm:hidden"
-        />
-      </div>
 
       {/* TODO: Add the timeline or replace it with some other section  */}
 
