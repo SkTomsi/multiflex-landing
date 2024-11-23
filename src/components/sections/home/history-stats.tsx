@@ -26,7 +26,7 @@ export default function History() {
       <motion.div
         className={cn('-y-20 flex flex-col gap-y-1 p-4 opacity-0', className)}
       >
-        <p className="stat-text lg:text-6xl">
+        <p className="stat-text text-4xl font-semibold tracking-tighter lg:text-6xl">
           <CountUp end={title} /> {unit}
         </p>
         <p className="sm-subheader-text lg:text-2xl">{description}</p>

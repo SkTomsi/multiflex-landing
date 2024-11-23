@@ -8,7 +8,6 @@ import { motion, stagger, useAnimate, useInView } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect } from 'react';
 import SectionHeader from '~/components/shared/SectionHeader';
-import { TextGenerateEffect } from '~/components/ui/text-generate-effect';
 
 const TeamCard = ({
   img,
@@ -59,7 +58,7 @@ export default function Team() {
   }, [animate, scope, inView]);
 
   return (
-    <div className="container">
+    <div className="container border-none">
       <SectionHeader title="The MultiFlex family: experience, embodied." />
       <div className="flex w-full flex-col gap-6 md:grid md:grid-cols-2 md:gap-20">
         <motion.div
@@ -81,16 +80,38 @@ export default function Team() {
           />
         </motion.div>
         <div className="flex flex-col gap-y-8 md:gap-y-20 md:px-10">
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             filter={false}
             animation={false}
             duration={0.8}
             className="sub-header-text"
             words="At Multiflex, we believe that our team is our greatest asset. Our
             success story is written by the hands and minds of dedicated
-            professionals who bring our vision to life every day."
-          />
-          <motion.div
+            professionals who bring our vision to life every day.
+            
+            Like you, we believe in the importance of family. Which is why we remain proudly family-run, well into our fourth decade. With Ashok’s keen marketing and research insights, Anand’s unparalleled supplier database, the production genius of Reuben, Joseph’s world-class quality control, Neha’s expert marketing, the whole-hearted efforts of the rest of our team, and the legacy carried forward by the next generation"
+          /> */}
+          <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:flex-1 md:space-y-4 md:text-base">
+            <p className="w-full">
+              At Multiflex, we believe that our team is our greatest asset. Our
+              success story is written by the hands and minds of dedicated
+              professionals who bring our vision to life every day.
+            </p>
+            <p className="">
+              Like you, we believe in the importance of family. Which is why we
+              remain proudly family-run, well into our fourth decade. With
+              Ashok’s keen marketing and research insights, Anand’s unparalleled
+              supplier database, the production genius of Reuben, Joseph’s
+              world-class quality control, Neha’s expertise in Design, the
+              whole-hearted efforts of the rest of our team, and the legacy
+              carried forward by the next generation
+            </p>
+            <p className="">
+              We consider each one of our employees to be family – they’ve grown
+              with us and we’ve grown with them.
+            </p>
+          </div>
+          {/* <motion.div
             className="grid grid-rows-3 gap-y-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -117,7 +138,7 @@ export default function Team() {
                 Artisans
               </p>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
 

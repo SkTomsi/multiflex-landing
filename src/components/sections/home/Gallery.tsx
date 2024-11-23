@@ -1,15 +1,13 @@
 import Image from 'next/image';
 import { GalleryImages } from '~/assets/gallery';
-import RoundedButton from '../../shared/RoundedButton';
 
 export function Gallery() {
   return (
-    <div className="container  my-20 flex flex-col items-center">
+    <div className="container mt-10 flex flex-col items-center">
       <div className="mb-12 flex flex-col items-center gap-y-2">
-        <div className=" text-lg font-medium text-primary">
+        <div className="text-4xl font-extrabold  tracking-tighter text-brand-black lg:text-6xl">
           Crafted with tradition and &#x2661;
         </div>
-        <RoundedButton buttonText="Our Gallery" />
       </div>
       {/* <div className="grid grid-cols-2 gap-20 md:grid-cols-3">
         <div className="grid gap-20">

@@ -1,6 +1,6 @@
 'use client';
 
-import OImage from '@/assets/IDFC BKC 7.jpg';
+import OImage from '@/assets/IDFCCONF.webp';
 import HImage from '@/assets/Magarpatta Cocoon.jpg';
 import RImage from '@/assets/Residence In Colaba 2.png';
 import classNames from 'classnames';

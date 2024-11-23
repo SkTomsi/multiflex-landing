@@ -7,9 +7,7 @@ import Contact from '~/components/sections/home/contact';
 import Hero from '~/components/sections/home/hero';
 import History from '~/components/sections/home/history-stats';
 import ScopeOfWork from '~/components/sections/home/scope-of-work';
-// import ScopeOfWork from '~/components/sections/home/scope-of-work';
 import SupplyChain from '~/components/sections/home/supply-chain';
-import Team from '~/components/sections/home/team';
 
 export default function HomePage() {
   const container = useRef<HTMLDivElement>(null);
@@ -26,7 +24,7 @@ export default function HomePage() {
       <ScopeOfWork />
       <History />
       {/* <Projects /> */}
-      <Team />
+      {/* <Team /> */}
       <Contact />
     </div>
   );

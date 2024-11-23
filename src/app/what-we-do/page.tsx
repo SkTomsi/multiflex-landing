@@ -1,64 +1,27 @@
-import commericial from '@/assets/commericial-image.png';
-import kitchen from '@/assets/kitchen-image.png';
-import wardrobe from '@/assets/wardrobe-image.png';
+import shirtimg from '@/assets/Shirt.webp';
+import heroImg from '@/assets/hero-image-WWD.webp';
 import Image from 'next/image';
-import RoundedButton from '~/components/shared/RoundedButton';
 
 export default function page() {
   return (
     <div className="relative mx-0 flex flex-col">
       <div className="minimal-container flex flex-col items-center gap-x-2">
         <h1 className="text-center text-4xl font-extrabold tracking-tighter text-brand-black lg:text-6xl">
-          Innovative Design, Superior Quality, Exceptional Value
+          Innovative. Superior. Exceptional.
         </h1>
-        <RoundedButton buttonText="Our Expertise" />
+        <Image src={heroImg} alt="shirt" className="w-full object-contain" />
       </div>
-      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <div className="relative h-[600px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={commericial}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Commerical Spaces
-          </p>
-        </div>
-        <div className="relative h-[600px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={kitchen}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Kitchens
-          </p>
-        </div>
-        <div className="relative h-[600px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={wardrobe}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Wardrobes
-          </p>
-        </div>
-      </div>
+
       <div className="minimal-container mt-20 flex flex-col items-center gap-10">
-        <h1 className="text-center text-3xl font-bold tracking-tighter text-brand-black lg:text-5xl">
+        {/* <h1 className="text-center text-3xl font-bold tracking-tighter text-brand-black lg:text-5xl">
           LETS BRING YOUR VISION INTO AN EXPERIENCE WITH MULTIFLEX
-        </h1>
-        <div className="flex flex-col gap-x-2 lg:w-full lg:max-w-[900px] lg:flex-row lg:justify-between lg:gap-x-0 lg:gap-y-10">
-          <div className="lg:w-[30%]">
-            <RoundedButton buttonText="Our Values" />
-          </div>
+        </h1> */}
+        <div className="flex flex-col gap-x-2 lg:w-full lg:max-w-[1200px] lg:flex-row lg:justify-between  lg:gap-x-20 lg:gap-y-10">
+          <Image
+            src={shirtimg}
+            alt="shirt"
+            className="object-contain lg:w-[40%]"
+          />
           <div className="mt-8 flex flex-col gap-4 lg:mt-0 lg:w-[60%]">
             <div className="flex flex-col gap-y-2">
               <h2 className="text-xl font-extrabold uppercase tracking-tighter text-primary">

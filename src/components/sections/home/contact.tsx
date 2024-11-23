@@ -1,4 +1,8 @@
+import Chair1 from '@/assets/CBiege.webp';
+import Chair2 from '@/assets/CBlack.webp';
+import Chair3 from '@/assets/CBrown.webp';
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Contact() {
   return (
@@ -21,6 +25,44 @@ export default function Contact() {
         alt="wardrobe image"
         className="w-full object-contain"
       /> */}
+      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={Chair1}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Commerical Spaces
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={Chair2}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Kitchens
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={Chair3}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Wardrobes
+          </p> */}
+        </div>
+      </div>
       <div className="space-y-5 md:flex md:items-center md:justify-between">
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
           To discuss a project with Us,<br></br> Please get in touch:

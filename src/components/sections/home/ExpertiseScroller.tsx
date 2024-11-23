@@ -4,7 +4,7 @@ import { FeatureTitle } from '../../features/title';
 export default function ExpertiseScroller() {
   const features = [
     { title: 'Residencies', card: Residencies },
-    { title: 'Offices', card: Offices },
+    { title: 'Commercial Spaces', card: Offices },
     { title: 'Hospitability', card: Hospitability },
   ];
   return (
