@@ -5,7 +5,7 @@ export default function ExpertiseScroller() {
   const features = [
     { title: 'Residencies', card: Residencies },
     { title: 'Commercial Spaces', card: Offices },
-    { title: 'Hospitability', card: Hospitability },
+    { title: 'Hospitality', card: Hospitability },
   ];
   return (
     <section className="hidden md:block">
