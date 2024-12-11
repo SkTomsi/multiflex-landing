@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowRight } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useFormState } from 'react-dom';
 import { SendBusinessMailAction } from '~/app/actions';
 import {
@@ -24,6 +24,7 @@ export const BusinessForm = () => {
     initialState,
   );
   const { toast } = useToast();
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     if (state.status === 'false') {
@@ -37,6 +38,7 @@ export const BusinessForm = () => {
         title: state.message,
         description: "We'll get back to you soon.",
       });
+      setOpen(false);
     }
   }, [state, toast]);
 
@@ -44,11 +46,13 @@ export const BusinessForm = () => {
     toast({ title: 'We are sending your mail...', description: 'Please wait' });
     const form = Object.fromEntries(formData.entries());
 
+    console.log(form);
+
     formAction(form);
   }
 
   return (
-    <Dialog>
+    <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild className="hover:cursor-pointer">
         <div className="mt-10 flex items-center justify-between gap-2 rounded-2xl bg-primary p-6 text-white">
           {/* <p className="text-4xl font-extrabold tracking-tighter">
