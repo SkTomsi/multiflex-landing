@@ -28,14 +28,14 @@ export const FeatureTitle = ({ children, title }: FeatureTitleProps) => {
     }
   }, [isInView, title, setInViewFeature, inViewFeature]);
   return (
-    <p
+    <div
       ref={ref}
       className={classnames(
-        'w-fit py-12 text-6xl font-bold tracking-tighter transition-colors',
+        'w-fit pb-20 text-6xl font-bold tracking-tighter transition-colors',
         isInView ? 'text-black' : 'text-gray-300',
       )}
     >
-      {children}
-    </p>
+      <p className="py-20">{children}</p>
+    </div>
   );
 };

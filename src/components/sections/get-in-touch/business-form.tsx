@@ -1,4 +1,9 @@
+'use client';
+
 import { ArrowRight } from 'lucide-react';
+import { useEffect } from 'react';
+import { useFormState } from 'react-dom';
+import { SendBusinessMailAction } from '~/app/actions';
 import {
   Dialog,
   DialogContent,
@@ -6,8 +11,42 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '~/components/ui/dialog';
+import { useToast } from '~/hooks/use-toast';
+
+const initialState = {
+  message: '',
+  status: '',
+};
 
 export const BusinessForm = () => {
+  const [state, formAction] = useFormState(
+    SendBusinessMailAction,
+    initialState,
+  );
+  const { toast } = useToast();
+
+  useEffect(() => {
+    if (state.status === 'false') {
+      toast({
+        title: 'Oh no! Something went wrong',
+        description: state.message,
+      });
+    }
+    if (state.status === 'true') {
+      toast({
+        title: state.message,
+        description: "We'll get back to you soon.",
+      });
+    }
+  }, [state, toast]);
+
+  function sendMail(formData: FormData) {
+    toast({ title: 'We are sending your mail...', description: 'Please wait' });
+    const form = Object.fromEntries(formData.entries());
+
+    formAction(form);
+  }
+
   return (
     <Dialog>
       <DialogTrigger asChild className="hover:cursor-pointer">
@@ -31,7 +70,7 @@ export const BusinessForm = () => {
         <DialogHeader>
           <DialogTitle>Collaborate with Us</DialogTitle>
         </DialogHeader>
-        <form className="mx-auto w-full">
+        <form className="mx-auto w-full" action={sendMail}>
           <div className="group relative z-0 mb-5 w-full">
             <input
               type="text"
@@ -99,14 +138,14 @@ export const BusinessForm = () => {
           <div className="group relative z-0 mb-5 w-full">
             <input
               type="text"
-              name="company-location"
-              id="company-location"
+              name="companyLocation"
+              id="companyLocation"
               className="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-brand-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
               placeholder=" "
               required
             />
             <label
-              htmlFor="company-location"
+              htmlFor="companyLocation"
               className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-brand-primary dark:text-gray-400 peer-focus:dark:text-blue-500 rtl:peer-focus:translate-x-1/4"
             >
               Company Location
@@ -115,14 +154,14 @@ export const BusinessForm = () => {
           <div className="group relative z-0 mb-5 w-full">
             <input
               type="text"
-              name="business-description"
-              id="business-description"
+              name="businessDescription"
+              id="businessDescription"
               className="peer block w-full appearance-none border-0 border-b-2 border-gray-300 bg-transparent px-0 py-2.5 text-sm text-gray-900 focus:border-brand-primary focus:outline-none focus:ring-0 dark:border-gray-600 dark:text-white dark:focus:border-blue-500"
               placeholder=" "
               required
             />
             <label
-              htmlFor="business-description"
+              htmlFor="businessDescription"
               className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:start-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:font-medium peer-focus:text-brand-primary dark:text-gray-400 peer-focus:dark:text-blue-500 rtl:peer-focus:translate-x-1/4"
             >
               Line of Business
@@ -136,6 +175,7 @@ export const BusinessForm = () => {
           </label>
           <textarea
             id="message"
+            name="message"
             rows={4}
             className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
             placeholder="Leave a message..."

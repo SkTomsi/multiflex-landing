@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 type FeatureStore = {
   inViewFeature: string | null;
+  // eslint-disable-next-line no-unused-vars
   setInViewFeature: (feature: string | null) => void;
 };
 

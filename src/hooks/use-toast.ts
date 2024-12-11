@@ -95,6 +95,7 @@ export const reducer = (state: State, action: Action): State => {
       if (toastId) {
         addToRemoveQueue(toastId);
       } else {
+        // biome-ignore lint/complexity/noForEach: <explanation>
         state.toasts.forEach((toast) => {
           addToRemoveQueue(toast.id);
         });
@@ -126,6 +127,7 @@ export const reducer = (state: State, action: Action): State => {
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 const listeners: ((state: State) => void)[] = [];
 
 let memoryState: State = { toasts: [] };

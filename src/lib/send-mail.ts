@@ -26,6 +26,9 @@ export async function sendMail({
   subject,
   text,
   html,
+  cname,
+  companyLocation,
+  businessDescription,
 }: {
   phone: string;
   message: string;
@@ -34,6 +37,9 @@ export async function sendMail({
   subject: string;
   text: string;
   html?: string;
+  cname?: string;
+  companyLocation?: string;
+  businessDescription?: string;
 }) {
   try {
     const isVerified = await transporter.verify();
@@ -67,7 +73,15 @@ export async function sendMail({
       html:
         html === 'contact'
           ? ContactEmailTemplate({ name, email, phone, message })
-          : BusinessEmailTemplate({ name, email, phone, message }),
+          : BusinessEmailTemplate({
+              name,
+              email,
+              phone,
+              message,
+              cname,
+              companyLocation,
+              businessDescription,
+            }),
     });
     console.log('Message Sent', info.messageId);
     console.log('Mail sent to', SITE_MAIL_RECIEVER);

@@ -47,11 +47,17 @@ export const BusinessEmailTemplate = ({
   email,
   phone,
   message,
+  cname,
+  companyLocation,
+  businessDescription,
 }: {
   name: string;
   email: string;
   phone: string;
   message: string;
+  cname: string | undefined;
+  companyLocation: string | undefined;
+  businessDescription: string | undefined;
 }) => {
   return `
       <!DOCTYPE html>
@@ -69,6 +75,9 @@ export const BusinessEmailTemplate = ({
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone Number:</strong> ${phone}</p>
         <p><strong>Message:</strong><br> ${message}</p>
+        <p><strong>Company Name:</strong> ${cname}</p>
+        <p><strong>Company Location:</strong> ${companyLocation}</p>
+        <p><strong>Business Description:</strong><br> ${businessDescription}</p>
     </div>
 </body>
 </html>`;

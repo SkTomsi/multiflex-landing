@@ -39,7 +39,9 @@ export default function Page() {
     return (
       <motion.div
         ref={scope}
-        className={`flex h-52 w-full flex-1 flex-grow cursor-pointer flex-col justify-between rounded-lg bg-brand-grey-secondary p-6 text-white`}
+        className={
+          'flex h-52 w-full flex-1 flex-grow cursor-pointer flex-col justify-between rounded-lg bg-brand-grey-secondary p-6 text-white'
+        }
         layout="position"
         onMouseOver={async () => {
           setExpanded(index);

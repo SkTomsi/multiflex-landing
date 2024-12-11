@@ -7,7 +7,7 @@
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "lint:fix": "next lint --fix",
     "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}"
   },
