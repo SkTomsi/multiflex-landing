@@ -2,9 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 interface IRoundedButton {
   buttonText: string;
+  link?: string;
 }
 
 const buttonVariants = {
@@ -24,22 +26,24 @@ const buttonVariants = {
   },
 };
 
-function RoundedButton({ buttonText }: IRoundedButton) {
+function RoundedButton({ buttonText, link }: IRoundedButton) {
   return (
-    <motion.div
-      className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-brand-foreground px-4 py-3 transition-all duration-300 ease-in-out"
-      variants={buttonVariants}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
-    >
-      <div className="flex size-3 items-center justify-center rounded-full bg-primary transition-all duration-300 ease-in-out group-hover:size-8 ">
-        <ArrowUpRight className="hidden text-white group-hover:block" />
-      </div>
-      <div className="text-sm transition-all duration-300 ease-in-out">
-        {buttonText}
-      </div>
-    </motion.div>
+    <Link href={link || '/get-in-touch'} passHref>
+      <motion.div
+        className="group flex w-fit cursor-pointer items-center gap-x-2 rounded-full bg-brand-foreground px-4 py-3 transition-all duration-300 ease-in-out"
+        variants={buttonVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        <div className="flex size-3 items-center justify-center rounded-full bg-primary transition-all duration-300 ease-in-out group-hover:size-8 ">
+          <ArrowUpRight className="hidden text-white group-hover:block" />
+        </div>
+        <div className="text-sm transition-all duration-300 ease-in-out">
+          {buttonText}
+        </div>
+      </motion.div>
+    </Link>
   );
 }
 

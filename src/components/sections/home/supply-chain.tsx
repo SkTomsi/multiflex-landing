@@ -57,7 +57,10 @@ export default function SupplyChain() {
               className="sub-header-text w-5/6"
             />
           </div>
-          <RoundedButton buttonText="Brands we partner with" />
+          <RoundedButton
+            buttonText="Brands we partner with"
+            link="/what-we-do#our-partners"
+          />
         </div>
       </div>
     </div>

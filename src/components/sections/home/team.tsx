@@ -13,11 +13,13 @@ const TeamCard = ({
   img,
   name,
   designation,
+  description = 'THIS IS THE DESCRIPTION',
   isEmpty,
 }: {
   img?: StaticImageData;
   name?: string;
   designation?: string;
+  description?: string;
   isEmpty?: boolean;
 }) => {
   if (isEmpty) {
@@ -25,8 +27,20 @@ const TeamCard = ({
   }
 
   return (
-    <motion.div className="flex flex-col gap-2 p-4">
-      <Image src={img!} alt="ashok quadros" className="w-full object-contain" />
+    <motion.div className="flex flex-col gap-2 p-4 ">
+      <div className="group relative">
+        <Image
+          src={img!}
+          alt={name || 'team member'}
+          className="w-full object-contain"
+        />
+
+        {/* Overlay that appears on hover */}
+        <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
+          <p className="text-sm text-white">{description}</p>
+        </div>
+      </div>
+
       <div className="p-1">
         <p className="text-base font-semibold text-brand-black">{name}</p>
         <p className="text-xs font-normal text-brand-grey md:text-sm">

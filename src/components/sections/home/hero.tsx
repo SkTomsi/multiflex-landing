@@ -1,7 +1,7 @@
-// import heroImage2 from '@/assets/hero-image-2.webp';
 import heroImage from '@/assets/hero-image.webp';
-import { motion, MotionValue, useTransform } from 'framer-motion';
+import { type MotionValue, motion, useTransform } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { TextGenerateEffect } from '../../ui/text-generate-effect';
 
 export default function Hero({
@@ -52,7 +52,7 @@ export default function Hero({
 
   return (
     <motion.div
-      className="-z-30 mb-20 flex w-full flex-col items-center justify-start md:mb-12"
+      className="mb-20 flex w-full flex-col items-center justify-start md:mb-12"
       style={{ scale }}
     >
       <div className="container flex flex-col items-start justify-center space-y-8 overflow-hidden border-none md:space-y-14">
@@ -91,15 +91,14 @@ export default function Hero({
             animate="reveal"
           >
             {pills.map((p) => (
-              <motion.p
-                className="w-fit rounded-full  border border-brand-primary px-4 py-1 font-medium text-brand-primary md:py-2 md:text-base"
-                key={p}
-                // variants={dropUpVariants}
-                // initial="hidden"
-                // animate="visible"
-              >
-                {p}
-              </motion.p>
+              <Link href={'/our-showcase'} key={p}>
+                <motion.p
+                  className="w-fit cursor-pointer rounded-full border border-brand-primary px-4 py-1 font-medium text-brand-primary md:py-2 md:text-base"
+                  key={p}
+                >
+                  {p}
+                </motion.p>
+              </Link>
             ))}
           </motion.div>
           <TextGenerateEffect

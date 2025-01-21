@@ -63,9 +63,9 @@ export default function Contact() {
           </p> */}
         </div>
       </div>
-      <div className="space-y-5 md:flex md:items-center md:justify-between">
+      <div className="space-y-5 md:flex md:items-center md:gap-28">
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
-          To discuss a project with Us,<br></br> Please get in touch:
+          To discuss a project with us,<br></br> Please get in touch:
         </p>
         <div className="group flex w-full items-center justify-center gap-4 rounded-full bg-brand-foreground px-8 py-4 text-2xl font-bold tracking-tighter text-brand-primary md:w-fit md:text-3xl">
           hello@multiflexmodular.com

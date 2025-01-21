@@ -78,7 +78,10 @@ export default function page() {
             </div>
           </div>
         </div>
-        <div className="minimal-container flex flex-col gap-x-2">
+        <div
+          className="minimal-container flex flex-col gap-x-2"
+          id="our-partners"
+        >
           <SectionHeader
             title="Our Partners"
             description="We partner with suppliers who not only uphold the highest standards of craftsmanship but also share our commitment to ethics, trust, and reliability. Working closely with our supplier network ensures that every single part we produce reflects our dedication to excellence.
