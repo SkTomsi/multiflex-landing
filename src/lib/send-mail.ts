@@ -8,10 +8,8 @@ const SMTP_SERVER_USERNAME = process.env.SMTP_SERVER_USERNAME;
 const SMTP_SERVER_PASSWORD = process.env.SMTP_SERVER_PASSWORD;
 const SITE_MAIL_RECIEVER = process.env.SITE_MAIL_RECIEVER;
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: 'yahoo',
   host: SMTP_SERVER_HOST,
-  port: 587,
-  secure: true,
   auth: {
     user: SMTP_SERVER_USERNAME,
     pass: SMTP_SERVER_PASSWORD,
@@ -66,8 +64,8 @@ export async function sendMail({
     console.log(`sender: ${email}, recipient: ${SITE_MAIL_RECIEVER}`);
 
     const info = await transporter.sendMail({
-      from: email,
-      to: SMTP_SERVER_USERNAME,
+      from: SMTP_SERVER_USERNAME,
+      to: SITE_MAIL_RECIEVER,
       subject,
       text,
       html:

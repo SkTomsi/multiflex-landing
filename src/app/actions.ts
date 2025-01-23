@@ -13,14 +13,12 @@ interface FormData {
 }
 
 export async function SendMailAction(prevState: unknown, formData: unknown) {
-  console.log(formData);
-
   const form = formData as FormData;
 
   const mailText = `Name: ${form.name}\n  Email: ${form.email}\nMessage: ${form.message}`;
   const response = await sendMail({
     email: form.email,
-    subject: 'New Contact Form Submission',
+    subject: `New Contact Form Submission from ${form.email}`,
     text: mailText,
     name: form.name,
     phone: form.number,
@@ -47,14 +45,12 @@ export async function SendBusinessMailAction(
   prevState: unknown,
   formData: unknown,
 ) {
-  console.log(formData);
-
   const form = formData as FormData;
 
   const mailText = `Name: ${form.name}\n  Email: ${form.email}\nMessage: ${form.message}`;
   const response = await sendMail({
     email: form.email,
-    subject: 'New Business Form Submission',
+    subject: `New Business Form Submission from ${form.email}`,
     text: mailText,
     name: form.name,
     phone: form.number,

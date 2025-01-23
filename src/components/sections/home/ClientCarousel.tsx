@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '~/components/ui/accordion';
 import { CLIENTS } from '~/constants/Clients';
 import { cn } from '~/lib/utils';
 export default function ClientCarousel() {
@@ -35,7 +41,7 @@ export default function ClientCarousel() {
 
     return (
       <motion.div
-        className="flex h-[100px] min-w-fit items-center justify-center  md:h-[90px]"
+        className="flex h-[70px] min-w-fit items-center justify-center  md:h-[90px]"
         variants={logoVariants}
         initial="initial"
         whileInView="animate"
@@ -54,8 +60,8 @@ export default function ClientCarousel() {
 
   return (
     <div className="flex flex-col gap-y-5 overflow-hidden grayscale">
-      <div className="flex flex-col items-center justify-between antialiased opacity-85 [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] md:[mask-image:none]">
-        <div className="flex w-full animate-[infinite-sroll_20s_linear_infinite] justify-evenly gap-x-10 md:animate-none">
+      <div className="flex flex-col items-center justify-between antialiased opacity-85 ">
+        <div className="flex w-full flex-wrap justify-evenly gap-x-10 md:animate-none">
           <HighResImage src={CLIENTS.IITB.logo} alt={CLIENTS.IITB.name} />
           <HighResImage src={CLIENTS.RBS.logo} alt={CLIENTS.RBS.name} />
           <HighResImage src={CLIENTS.APPLE.logo} alt={CLIENTS.APPLE.name} />
@@ -70,7 +76,7 @@ export default function ClientCarousel() {
           />
           <HighResImage src={CLIENTS.HSBC.logo} alt={CLIENTS.HSBC.name} />
         </div>
-        <div className="flex w-full animate-infinite-sroll-reverse justify-evenly gap-x-10 md:animate-none">
+        <div className="flex w-full flex-wrap justify-evenly gap-x-10 md:animate-none">
           <HighResImage src={CLIENTS.ITC.logo} alt={CLIENTS.ITC.name} />
           <HighResImage src={CLIENTS.SC.logo} alt={CLIENTS.SC.name} />
           <HighResImage src={CLIENTS.RAHEJA.logo} alt={CLIENTS.RAHEJA.name} />
@@ -79,6 +85,48 @@ export default function ClientCarousel() {
           <HighResImage src={CLIENTS.MERRIL.logo} alt={CLIENTS.MERRIL.name} />
           <HighResImage src={CLIENTS.ICICI.logo} alt={CLIENTS.ICICI.name} />
         </div>
+        <Accordion type="single" collapsible className="w-full border-none ">
+          <AccordionItem value="item-1">
+            <AccordionTrigger className="flex justify-end text-sm tracking-tight">
+              view more clients
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="flex w-full  flex-wrap justify-evenly gap-x-10 md:animate-none">
+                <HighResImage
+                  src={CLIENTS.ANTWERP.logo}
+                  alt={CLIENTS.ANTWERP.name}
+                />
+                <HighResImage src={CLIENTS.LB.logo} alt={CLIENTS.LB.name} />
+                <HighResImage
+                  src={CLIENTS.loreal.logo}
+                  alt={CLIENTS.loreal.name}
+                />
+                <HighResImage
+                  src={CLIENTS.NOMURA.logo}
+                  alt={CLIENTS.NOMURA.name}
+                />
+                <HighResImage
+                  src={CLIENTS.OBEROI.logo}
+                  alt={CLIENTS.OBEROI.name}
+                />
+                <HighResImage
+                  src={CLIENTS.SWISS.logo}
+                  alt={CLIENTS.SWISS.name}
+                />
+                <HighResImage src={CLIENTS.TBZ.logo} alt={CLIENTS.TBZ.name} />
+                <HighResImage
+                  src={CLIENTS.TEMASEK.logo}
+                  alt={CLIENTS.TEMASEK.name}
+                />
+                <HighResImage
+                  src={CLIENTS.THANGAMALAYIL.logo}
+                  alt={CLIENTS.THANGAMALAYIL.name}
+                />
+                <HighResImage src={CLIENTS.WP.logo} alt={CLIENTS.WP.name} />
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </div>
   );

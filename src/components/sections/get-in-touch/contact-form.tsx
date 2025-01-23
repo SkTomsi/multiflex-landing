@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useFormState } from 'react-dom';
+import { useFormState, useFormStatus } from 'react-dom';
 import { SendMailAction } from '~/app/actions';
 import { useToast } from '~/hooks/use-toast';
 
@@ -12,6 +12,7 @@ const initialState = {
 
 export const ContactForm = () => {
   const [state, formAction] = useFormState(SendMailAction, initialState);
+  const status = useFormStatus();
   const { toast } = useToast();
 
   useEffect(() => {
@@ -29,8 +30,11 @@ export const ContactForm = () => {
     }
   }, [state, toast]);
 
-  function sendMail(formData: FormData) {
-    toast({ title: 'We are sending your mail...', description: 'Please wait' });
+  async function sendMail(formData: FormData) {
+    toast({
+      title: 'We are sending your mail...',
+      description: 'Please wait',
+    });
     const form = Object.fromEntries(formData.entries());
 
     formAction(form);
@@ -103,7 +107,8 @@ export const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className="mt-4 w-full rounded-lg bg-brand-primary px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-primary/80 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
+        disabled={status.pending}
+        className="mt-4 w-full rounded-lg bg-brand-primary px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-brand-primary/80 focus:outline-none focus:ring-4 focus:ring-blue-300 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 sm:w-auto"
       >
         Send
       </button>
