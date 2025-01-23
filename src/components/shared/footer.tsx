@@ -40,9 +40,11 @@ const Footer = () => {
                   If you are interested in working with us or just want to say
                   hello to us, simply drop us a line
                 </p>
-                <p className="font-medium text-white ">
-                  hello@multiflexmodular.com
-                </p>
+                <a href="mailto:hello@multiflexmodular.com">
+                  <p className="font-medium text-white ">
+                    hello@multiflexmodular.com
+                  </p>
+                </a>
               </div>
             </div>
             <div className="flex w-full flex-col gap-10">

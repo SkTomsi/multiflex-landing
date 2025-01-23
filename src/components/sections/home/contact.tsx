@@ -67,13 +67,15 @@ export default function Contact() {
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
           To discuss a project with us,<br></br> Please get in touch:
         </p>
-        <div className="group flex w-full items-center justify-center gap-4 rounded-full bg-brand-foreground px-8 py-4 text-2xl font-bold tracking-tighter text-brand-primary md:w-fit md:text-3xl">
-          hello@multiflexmodular.com
-          <ArrowRight
-            size={30}
-            className="transition-all duration-300 ease-in-out group-hover:-rotate-45"
-          />
-        </div>
+        <a href="mailto:hello@multiflexmodular.com">
+          <div className="group flex w-full items-center justify-center gap-4 rounded-full bg-brand-foreground px-8 py-4 text-2xl font-bold tracking-tighter text-brand-primary md:w-fit md:text-3xl">
+            hello@multiflexmodular.com
+            <ArrowRight
+              size={30}
+              className="transition-all duration-300 ease-in-out group-hover:-rotate-45"
+            />
+          </div>
+        </a>
       </div>
     </div>
   );

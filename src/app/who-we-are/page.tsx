@@ -2,7 +2,7 @@
 
 import heroImage from '@/assets/hero-image-WWA.webp';
 
-import { motion, useAnimate } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 import Team from '~/components/sections/home/team';
@@ -13,76 +13,62 @@ export default function Page() {
     number,
     title,
     desc,
-    // expanded,
-    // setExpanded,
-    index,
   }: {
-    index: number;
     title: string;
     number: string;
     desc: string;
-    // expanded: boolean;
-    // setExpanded: Dispatch<SetStateAction<number | null>>;
   }) => {
-    const [scope, animate] = useAnimate();
-    const [expanded, setExpanded] = useState<number | null>(0);
-
-    console.log(expanded);
-
-    // useEffect(() => {
-    //   animate(scope.current, {
-    //     flex: 4,
-    //     background: '#4E2911',
-    //   });
-    // }, [expanded, animate, scope]);
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
       <motion.div
-        ref={scope}
-        className={
-          'flex h-52 w-full flex-1 flex-grow cursor-pointer flex-col justify-between rounded-lg bg-brand-grey-secondary p-6 text-white'
-        }
-        layout="position"
-        onMouseOver={async () => {
-          setExpanded(index);
-          animate(
-            scope.current,
-            { flex: 4, background: '#4E2911' },
-            { ease: 'easeInOut' },
-          );
-          await animate(
-            '#desc',
-            {
-              opacity: 1,
-              display: 'block',
-            },
-            { ease: 'easeInOut', delay: 0.2 },
-          );
-        }}
-        onMouseLeave={() => {
-          animate('#desc', {
-            opacity: 0,
-            display: 'none',
-          });
-          animate(
-            scope.current,
-            { flex: 1, background: '#C0C0C0' },
-            { ease: 'easeInOut' },
-          );
-          setExpanded(0);
-        }}
+        layout
+        className={`
+          relative 
+          flex 
+          min-h-[250px]
+          w-full 
+          cursor-pointer 
+          flex-col 
+          justify-between 
+          overflow-hidden 
+          rounded-lg 
+          p-6 
+          text-white 
+          transition-all
+          duration-300 
+          ease-in-out 
+          md:h-[200px]
+          ${isHovered ? 'bg-[#4E2911] md:flex-[4]' : 'flex-1 bg-[#C0C0C0]'}
+        `}
+        onHoverStart={() => setIsHovered(true)}
+        onHoverEnd={() => setIsHovered(false)}
       >
-        <motion.div className="flex flex-col gap-4 md:flex-row">
-          <motion.p layout="position" className="text-4xl font-bold">
-            {number}
+        <div className="flex flex-grow flex-col justify-between ">
+          <motion.div className="flex flex-col gap-4">
+            <motion.p layout className="text-4xl font-bold">
+              {number}
+            </motion.p>
+
+            <AnimatePresence>
+              {isHovered && (
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.3 }}
+                  className="absolute left-6 right-6 top-16 order-2 text-base"
+                >
+                  {desc}
+                </motion.p>
+              )}
+            </AnimatePresence>
+          </motion.div>
+
+          <motion.p layout className="order-1 text-2xl font-medium">
+            {title}
           </motion.p>
-          <motion.p id="desc" className="hidden w-full opacity-0">
-            {desc}
-          </motion.p>
-        </motion.div>
-        <motion.p layout="position" className="mt-4 text-2xl font-medium">
-          {title}
-        </motion.p>
+        </div>
       </motion.div>
     );
   };
@@ -172,7 +158,6 @@ export default function Page() {
               desc={feature.desc}
               // expanded={expanded === feature.index}
               // setExpanded={setExpanded}
-              index={feature.index}
             />
           ))}
         </div>
