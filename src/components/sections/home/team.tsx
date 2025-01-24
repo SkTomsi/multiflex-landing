@@ -13,7 +13,7 @@ const TeamCard = ({
   img,
   name,
   designation,
-  description = 'THIS IS THE DESCRIPTION',
+  description,
   isEmpty,
 }: {
   img?: StaticImageData;
@@ -27,17 +27,17 @@ const TeamCard = ({
   }
 
   return (
-    <motion.div className="flex flex-col gap-2 p-4 ">
-      <div className="group relative">
+    <motion.div className="flex flex-col gap-2 p-4 transition-all duration-500 ease-out">
+      <div className="group relative overflow-hidden">
         <Image
           src={img!}
           alt={name || 'team member'}
-          className="w-full object-contain"
+          className="w-full object-contain group-hover:blur-sm"
         />
 
         {/* Overlay that appears on hover */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
-          <p className="text-sm text-white">{description}</p>
+          <p className="text-[13px] text-white">{description}</p>
         </div>
       </div>
 
@@ -164,22 +164,26 @@ export default function Team() {
           img={AshokQuadrosImg}
           name="Ashok Quadros"
           designation="Co-Founder"
+          description="With 30 years of experience, Ashok manages marketing and customer interfaces for projects and finance, leveraging his knowledge of global advancements in panel-processing materials, processes, and machinery."
         />
         <TeamCard
           img={anandImg}
           name="Anand Quadros"
           designation="Co-Founder"
+          description="With 30 years of experience, Anand handles logistics and procurement, using his strong supplier relationships to ensure timely, cost-effective material procurement for project success."
         />
 
         <TeamCard
           img={reubenImg}
           name="Reuben Lobo"
           designation="Head - Manufacturing"
+          description="With 24 years of experience, Reuben specializes in production, hardware, and tooling applications, ensuring factory efficiency. Trained in Austria and Germany, he is a key reference for our team."
         />
         <TeamCard
           img={josephImg}
           name="Joseph Noronha"
           designation="Head - Quality Check"
+          description="Joseph is the critical last-mile interface for site installation. He oversees quality control and manages the Packing, Assembly, and Dispatch Departments. No piece of furniture leaves our factory without being appraised by his critical eye."
         />
         {/* <TeamCard isEmpty /> */}
         {/* <TeamCard isEmpty /> */}
