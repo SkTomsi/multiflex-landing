@@ -5,7 +5,7 @@ export function Gallery() {
   return (
     <div className="container mt-10 flex flex-col items-center">
       <div className="mb-12 flex flex-col items-center gap-y-2">
-        <div className="text-4xl font-extrabold  tracking-tighter text-brand-black lg:text-6xl">
+        <div className="text-center text-4xl  font-extrabold tracking-tighter text-brand-black lg:text-6xl">
           Crafted with tradition and &#x2661;
         </div>
       </div>
