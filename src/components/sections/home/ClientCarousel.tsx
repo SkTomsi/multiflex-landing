@@ -87,8 +87,8 @@ export default function ClientCarousel() {
         </div>
         <Accordion type="single" collapsible className="w-full border-none ">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="flex justify-end text-sm tracking-tight">
-              view more clients
+            <AccordionTrigger className="flex justify-end text-sm tracking-tight data-[state=open]:opacity-0">
+              <p className="">view more clients</p>
             </AccordionTrigger>
             <AccordionContent>
               <div className="flex w-full  flex-wrap justify-evenly gap-x-10 md:animate-none">

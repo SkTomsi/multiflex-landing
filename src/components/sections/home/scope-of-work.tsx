@@ -1,6 +1,6 @@
-import C from '@/assets/commericial-image.png';
-import K from '@/assets/kitchen-image.png';
-import W from '@/assets/wardrobe-image.png';
+import K from '@/assets/IDFCCONF.webp';
+import W from '@/assets/Magarpatta Cocoon.jpg';
+import C from '@/assets/Picture9.jpg';
 import Image from 'next/image';
 import SectionHeader from '~/components/shared/SectionHeader';
 import { TextGenerateEffect } from '~/components/ui/text-generate-effect';
@@ -31,7 +31,7 @@ export default function ScopeOfWork() {
             />
           </div>
           <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Commerical Spaces
+            Residencies
           </p>
         </div>
         <div className="relative h-[500px] w-full">
@@ -43,7 +43,7 @@ export default function ScopeOfWork() {
             />
           </div>
           <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Kitchens
+            Commerical Spaces
           </p>
         </div>
         <div className="relative h-[500px] w-full">
@@ -55,7 +55,7 @@ export default function ScopeOfWork() {
             />
           </div>
           <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Wardrobes
+            Hospitality
           </p>
         </div>
       </div>

@@ -37,7 +37,7 @@ const TeamCard = ({
 
         {/* Overlay that appears on hover */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
-          <p className="text-[13px] text-white">{description}</p>
+          <p className="text-xs text-white md:text-[13px]">{description}</p>
         </div>
       </div>
 
@@ -164,25 +164,25 @@ export default function Team() {
           img={AshokQuadrosImg}
           name="Ashok Quadros"
           designation="Co-Founder"
-          description="With 30 years of experience, Ashok manages marketing and customer interfaces for projects and finance, leveraging his knowledge of global advancements in panel-processing materials, processes, and machinery."
+          description="With 35 years of experience, Ashok oversees marketing and customer interactions for projects and finance, utilizing his understanding of international developments in panel-processing materials, techniques, and equipment."
         />
         <TeamCard
           img={anandImg}
           name="Anand Quadros"
           designation="Co-Founder"
-          description="With 30 years of experience, Anand handles logistics and procurement, using his strong supplier relationships to ensure timely, cost-effective material procurement for project success."
+          description="With 35 years of expertise, Anand manages logistics and procurement, leveraging his robust connections with suppliers to secure materials efficiently and economically, ensuring project success."
         />
 
         <TeamCard
           img={reubenImg}
           name="Reuben Lobo"
-          designation="Head - Manufacturing"
-          description="With 24 years of experience, Reuben specializes in production, hardware, and tooling applications, ensuring factory efficiency. Trained in Austria and Germany, he is a key reference for our team."
+          designation="Head - Manufacturing and Innovation"
+          description="Trained in Austria and Germany, Reuben, with 29 years of experience, specializes in production, hardware, and tooling applications, ensuring factory efficiency. He is a key reference for our team."
         />
         <TeamCard
           img={josephImg}
           name="Joseph Noronha"
-          designation="Head - Quality Check"
+          designation="Head - Quality Assurance and Execution"
           description="Joseph is the critical last-mile interface for site installation. He oversees quality control and manages the Packing, Assembly, and Dispatch Departments. No piece of furniture leaves our factory without being appraised by his critical eye."
         />
         {/* <TeamCard isEmpty /> */}
@@ -191,7 +191,8 @@ export default function Team() {
         <TeamCard
           img={nehaImg}
           name="Neha Jhunhunwala Eidnani"
-          designation="Head - Design & Customer Experience"
+          designation="Head - Operations"
+          description="With 2 decades of experience, Neha specializes in operations and client interface, leveraging her knowledge of international and domestic markets to ensure project success and client satisfaction."
         />
         {/* <TeamCard
           img={glennImg}

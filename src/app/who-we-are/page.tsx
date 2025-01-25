@@ -36,8 +36,8 @@ export default function Page() {
           p-6 
           text-white 
           transition-all
-          duration-300 
-          ease-in-out 
+          duration-500 
+          ease-out
           md:h-[200px]
           ${isHovered ? 'bg-[#4E2911] md:flex-[4]' : 'flex-1 bg-[#C0C0C0]'}
         `}
@@ -56,7 +56,7 @@ export default function Page() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.7 }}
                   className="absolute left-6 right-6 top-16 order-2 text-base"
                 >
                   {desc}

@@ -2,7 +2,7 @@
 
 import OImage from '@/assets/IDFCCONF.webp';
 import HImage from '@/assets/Magarpatta Cocoon.jpg';
-import RImage from '@/assets/Residence In Colaba 2.png';
+import RImage from '@/assets/Picture9.jpg';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { type ReactNode } from 'react';
@@ -24,7 +24,7 @@ const FeatureCard = ({
   return (
     <div
       className={classNames(
-        'absolute inset-0 h-full w-full  overflow-hidden bg-red-300 transition-opacity duration-500',
+        'absolute inset-0 h-full w-full  overflow-hidden  transition-opacity duration-500',
         inViewFeature === title ? 'opacity-100' : 'opacity-0',
       )}
     >
