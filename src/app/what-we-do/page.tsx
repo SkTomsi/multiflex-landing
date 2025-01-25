@@ -12,14 +12,13 @@ export default function page() {
         <h1 className="text-center text-4xl font-extrabold tracking-tighter text-brand-black lg:text-6xl">
           Innovative. Superior. Exceptional.
         </h1>
-        <Image src={heroImg} alt="shirt" className="w-full object-contain" />
       </div>
 
-      <div className="minimal-container mt-20 flex flex-col items-center gap-10">
+      <div className="minimal-container  flex flex-col items-center gap-10">
         {/* <h1 className="text-center text-3xl font-bold tracking-tighter text-brand-black lg:text-5xl">
           LETS BRING YOUR VISION INTO AN EXPERIENCE WITH MULTIFLEX
         </h1> */}
-        <div className="flex flex-col gap-x-2 lg:w-full lg:max-w-[1200px] lg:flex-row lg:justify-between  lg:gap-x-20 lg:gap-y-10">
+        <div className="flex flex-col gap-x-2 lg:w-full lg:max-w-[1200px] lg:flex-row lg:justify-between lg:gap-x-20 lg:gap-y-10">
           <Image
             src={shirtimg}
             alt="shirt"
@@ -102,6 +101,7 @@ Our global supplier network enables us to access a wide range of hardware, mater
           />
         </div>
       </div>
+      <Image src={heroImg} alt="shirt" className="w-full object-contain" />
     </div>
   );
 }

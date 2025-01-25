@@ -133,11 +133,6 @@ export default function Page() {
             </p>
           </div>
         </div>
-        <Image
-          src={heroImage}
-          alt="hero image"
-          className="w-full object-contain"
-        />
       </div>
       <div className="minimal-container flex flex-col ">
         <SectionHeader
@@ -281,6 +276,11 @@ export default function Page() {
           </li>
         </ol>
       </div> */}
+      <Image
+        src={heroImage}
+        alt="hero image"
+        className="w-full object-contain"
+      />
     </div>
   );
 }
