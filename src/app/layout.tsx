@@ -1,6 +1,7 @@
 import { Manrope } from 'next/font/google';
 import '~/styles/globals.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import Footer from '~/components/shared/footer';
 import Header from '~/components/shared/Header';
@@ -48,6 +49,7 @@ export default function RootLayout({
           <Toaster />
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   );
