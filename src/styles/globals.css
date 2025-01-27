@@ -38,7 +38,7 @@
   }
 
   .container {
-    @apply min-w-full space-y-[40px] border-b border-brand-grey-secondary bg-white px-4 py-10 md:space-y-[50px] md:px-14 md:py-16;
+    @apply min-w-full space-y-[40px] border-b border-brand-grey-secondary bg-white  px-4 py-10 md:space-y-[50px] md:px-14 md:py-16;
   }
   .minimal-container {
     @apply w-full space-y-[40px]  bg-white px-4 py-10 md:space-y-[50px] md:px-14 md:py-16;

@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 export default function Contact() {
   return (
-    <div className="container">
-      <div className="space-y-5 md:space-y-14">
+    <div className="container px-0">
+      <div className="space-y-5 px-4 md:space-y-14 md:px-14">
         <div className="flex w-full justify-end">
           <h3>Experience The Multiflex Difference</h3>
         </div>
@@ -63,7 +63,7 @@ export default function Contact() {
           </p> */}
         </div>
       </div>
-      <div className="space-y-5 md:flex md:items-center md:gap-28">
+      <div className="space-y-5 px-4 md:flex md:items-center md:gap-28  md:px-14 ">
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
           To discuss a project with us,<br></br> Please get in touch:
         </p>

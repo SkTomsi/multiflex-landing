@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import contactImage from '~/assets/contact-image.webp';
+import contactImage from '~/assets/Picture6.jpg';
 import { BusinessForm } from '~/components/sections/get-in-touch/business-form';
 import { ContactForm } from '~/components/sections/get-in-touch/contact-form';
 import RoundedButton from '~/components/shared/RoundedButton';
@@ -35,7 +35,7 @@ export default function page() {
       <Image
         src={contactImage}
         alt="contact-image"
-        className="mb-20 w-full object-contain"
+        className="w-full object-contain"
       />
     </div>
   );
