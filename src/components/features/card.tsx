@@ -1,7 +1,7 @@
 'use client';
 
 import OImage from '@/assets/IDFCCONF.webp';
-import HImage from '@/assets/Magarpatta Cocoon.jpg';
+import HImage from '@/assets/hosp-main.jpg';
 import RImage from '@/assets/Picture9.jpg';
 import classNames from 'classnames';
 import Image from 'next/image';

@@ -2,6 +2,9 @@
 
 import heroImage from '@/assets/hero-image-WWA.webp';
 
+import image1 from '@/assets/who-we-are/1.jpg';
+import image2 from '@/assets/who-we-are/2.jpg';
+import image3 from '@/assets/who-we-are/3.jpg';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -84,19 +87,19 @@ export default function Page() {
       index: 2,
       number: '02.',
       title: 'Collaborative excellence',
-      desc: 'We believe nothing great is ever built in isolation. That’s why we’re constantly in search of the best suppliers – quality and cost-wise – to partner with',
+      desc: 'We believe nothing great is ever built in isolation. That’s why we’re constantly in search of the best suppliers quality and cost-wise to partner with.',
     },
     {
       index: 3,
       number: '03.',
       title: 'Pioneering precision',
-      desc: 'A millimetre matters. It’s the difference between sleek, fully aligned furniture and an imperfect product that compromises the life of your hardware',
+      desc: 'A millimetre matters. It’s the difference between sleek, fully aligned furniture and an imperfect product that compromises the life of your hardware.',
     },
     {
       index: 4,
       number: '04.',
       title: 'Steadfast focus on ethics',
-      desc: 'We may be a furniture manufacturing firm, but we don’t cut corners. We always deliver what we commit, and with us, you can be sure you’re getting some of the finest furniture on the market',
+      desc: 'We may be a furniture manufacturing firm, but we don’t cut corners. We always deliver what we commit, and with us, you can be sure you’re getting some of the finest furniture on the market.',
     },
   ];
 
@@ -132,6 +135,44 @@ export default function Page() {
               excited to write another chapter in our success story with you.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image3}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Commerical Spaces
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image2}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Kitchens
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image1}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Wardrobes
+          </p> */}
         </div>
       </div>
       <div className="minimal-container flex flex-col ">
