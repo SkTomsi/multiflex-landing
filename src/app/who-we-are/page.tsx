@@ -1,10 +1,6 @@
 'use client';
 
-import image1 from '@/assets/who-we-are/1.jpg';
-import image2 from '@/assets/who-we-are/2.jpg';
-import image3 from '@/assets/who-we-are/3.jpg';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Team from '~/components/sections/home/team';
 import { SectionHeader } from '~/components/shared/SectionHeader';
@@ -151,44 +147,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-        <div className="relative h-[500px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={image3}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Commerical Spaces
-          </p> */}
-        </div>
-        <div className="relative h-[500px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={image2}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Kitchens
-          </p> */}
-        </div>
-        <div className="relative h-[500px] w-full">
-          <div className="h-full w-full ">
-            <Image
-              src={image1}
-              alt="commercial space"
-              className="h-full object-cover"
-            />
-          </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Wardrobes
-          </p> */}
-        </div>
-      </div>
+
       <div className="minimal-container flex flex-col ">
         <Team />
         <SectionHeader
