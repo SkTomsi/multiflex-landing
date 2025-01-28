@@ -1,4 +1,5 @@
-import shirtimg from '@/assets/Shirt.webp';
+import factory1 from '@/assets/factory/_A1_3055-min.webp';
+import factory2 from '@/assets/factory/_A1_3093-min.webp';
 import heroImg from '@/assets/hero-image-WWD.webp';
 import suppliersM from '@/assets/suppliers-mobile.png';
 import suppliers from '@/assets/suppliers.png';
@@ -6,6 +7,8 @@ import Image from 'next/image';
 import { SectionHeader } from '~/components/shared/SectionHeader';
 
 export default function page() {
+  //TODO: Change bottom image
+
   return (
     <div className="relative mx-0 flex flex-col">
       <div className="minimal-container flex flex-col items-center gap-x-2">
@@ -14,17 +17,28 @@ export default function page() {
         </h1>
       </div>
 
-      <div className="minimal-container  flex flex-col items-center gap-10">
+      <div className="minimal-container flex flex-col items-center gap-10 px-0 lg:pl-20">
         {/* <h1 className="text-center text-3xl font-bold tracking-tighter text-brand-black lg:text-5xl">
           LETS BRING YOUR VISION INTO AN EXPERIENCE WITH MULTIFLEX
         </h1> */}
-        <div className="flex flex-col gap-x-2 lg:w-full lg:max-w-[1200px] lg:flex-row lg:justify-between lg:gap-x-20 lg:gap-y-10">
-          <Image
-            src={shirtimg}
-            alt="shirt"
-            className="object-contain lg:w-[40%]"
-          />
-          <div className="mt-8 flex flex-col gap-4 lg:mt-0 lg:w-[60%]">
+        <div className="flex h-full flex-col gap-x-2  lg:w-full lg:flex-row-reverse lg:justify-between lg:gap-x-20 lg:gap-y-10 ">
+          <div className="flex min-h-full w-full flex-col gap-4  lg:w-[80%] lg:flex-row lg:gap-0">
+            <div className="w-full lg:mb-40">
+              <Image
+                src={factory1}
+                alt="shirt"
+                className="h-full object-cover"
+              />
+            </div>
+            <div className="w-full items-end  lg:-ml-10 lg:mt-40">
+              <Image
+                src={factory2}
+                alt="shirt"
+                className="h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="mt-8 flex flex-grow flex-col gap-4 px-4 lg:mt-0 lg:w-[50%]">
             <div className="flex flex-col gap-y-2">
               <h2 className="text-xl font-extrabold uppercase tracking-tighter text-primary">
                 Precision Engineering
@@ -101,6 +115,7 @@ Our global supplier network enables us to access a wide range of hardware, mater
           />
         </div>
       </div>
+
       <Image src={heroImg} alt="shirt" className="w-full object-contain" />
     </div>
   );

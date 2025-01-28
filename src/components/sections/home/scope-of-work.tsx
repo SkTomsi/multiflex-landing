@@ -1,5 +1,5 @@
+import W from '@/assets/hosp-main.jpg';
 import K from '@/assets/IDFCCONF.webp';
-import W from '@/assets/Magarpatta Cocoon.jpg';
 import C from '@/assets/Picture9.jpg';
 import Image from 'next/image';
 import SectionHeader from '~/components/shared/SectionHeader';
@@ -8,14 +8,14 @@ import ExpertiseScroller from './ExpertiseScroller';
 
 export default function ScopeOfWork() {
   return (
-    <div className="container">
-      <div className="space-y-5 md:flex md:flex-row-reverse md:items-start md:justify-between">
-        <SectionHeader title="What We Do" />
+    <div className="container bg-black ">
+      <div className="space-y-5 md:flex md:flex-row-reverse md:items-start md:justify-between ">
+        <SectionHeader title="What We Do" className="text-white" />
         <TextGenerateEffect
           filter={false}
           animation={false}
           duration={0.8}
-          className="sub-header-text md:w-[40%]"
+          className="sub-header-text text-white md:w-[40%]"
           words="Whether you're looking to elevate a commercial office space,
           design a cozy yet sophisticated home, or create an inviting atmosphere
           in a hospitality setting, we've got you covered."
@@ -31,7 +31,7 @@ export default function ScopeOfWork() {
             />
           </div>
           <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Residencies
+            Residences
           </p>
         </div>
         <div className="relative h-[500px] w-full">

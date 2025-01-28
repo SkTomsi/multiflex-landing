@@ -1,6 +1,6 @@
-import Chair1 from '@/assets/CBiege.webp';
-import Chair2 from '@/assets/CBlack.webp';
-import Chair3 from '@/assets/CBrown.webp';
+import image1 from '@/assets/who-we-are/1.jpg';
+import image2 from '@/assets/who-we-are/2.jpg';
+import image3 from '@/assets/who-we-are/3.jpg';
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
@@ -25,11 +25,12 @@ export default function Contact() {
         alt="wardrobe image"
         className="w-full object-contain"
       /> */}
+
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
             <Image
-              src={Chair1}
+              src={image3}
               alt="commercial space"
               className="h-full object-cover"
             />
@@ -41,7 +42,7 @@ export default function Contact() {
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
             <Image
-              src={Chair2}
+              src={image2}
               alt="commercial space"
               className="h-full object-cover"
             />
@@ -53,7 +54,7 @@ export default function Contact() {
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
             <Image
-              src={Chair3}
+              src={image1}
               alt="commercial space"
               className="h-full object-cover"
             />

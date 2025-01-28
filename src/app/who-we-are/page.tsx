@@ -1,13 +1,11 @@
 'use client';
 
-import heroImage from '@/assets/hero-image-WWA.webp';
-
 import image1 from '@/assets/who-we-are/1.jpg';
 import image2 from '@/assets/who-we-are/2.jpg';
 import image3 from '@/assets/who-we-are/3.jpg';
 import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Team from '~/components/sections/home/team';
 import { SectionHeader } from '~/components/shared/SectionHeader';
 
@@ -22,6 +20,17 @@ export default function Page() {
     desc: string;
   }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const handleResize = () => {
+        setIsMobile(window.innerWidth < 960); // Adjust the breakpoint as needed
+      };
+
+      handleResize(); // Check on mount
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
       <motion.div
@@ -42,10 +51,10 @@ export default function Page() {
           duration-500 
           ease-out
           md:h-[200px]
-          ${isHovered ? 'bg-[#4E2911] md:flex-[4]' : 'flex-1 bg-[#C0C0C0]'}
+          ${isHovered && !isMobile ? 'bg-[#4E2911] md:flex-[4]' : isMobile ? 'bg-[#4E2911]' : 'flex-1 bg-[#C0C0C0]'}
         `}
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
+        onHoverStart={() => !isMobile && setIsHovered(true)}
+        onHoverEnd={() => !isMobile && setIsHovered(false)}
       >
         <div className="flex flex-grow flex-col justify-between ">
           <motion.div className="flex flex-col gap-4">
@@ -54,7 +63,7 @@ export default function Page() {
             </motion.p>
 
             <AnimatePresence>
-              {isHovered && (
+              {isHovered && !isMobile && (
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -72,6 +81,11 @@ export default function Page() {
             {title}
           </motion.p>
         </div>
+
+        {/* Static display for mobile devices */}
+        {isMobile && (
+          <div className="absolute left-6 right-6 top-20 text-base">{desc}</div>
+        )}
       </motion.div>
     );
   };
@@ -176,6 +190,7 @@ export default function Page() {
         </div>
       </div>
       <div className="minimal-container flex flex-col ">
+        <Team />
         <SectionHeader
           title="What drives us"
           description="Like you, we believe in the importance of family. Which is why we
@@ -209,7 +224,6 @@ export default function Page() {
           className="w-full object-contain"
         />
       </div> */}
-      <Team />
 
       {/* TODO: Add the timeline or replace it with some other section  */}
 
@@ -317,11 +331,11 @@ export default function Page() {
           </li>
         </ol>
       </div> */}
-      <Image
+      {/* <Image
         src={heroImage}
         alt="hero image"
         className="w-full object-contain"
-      />
+      /> */}
     </div>
   );
 }

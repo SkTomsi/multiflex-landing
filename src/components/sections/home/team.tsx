@@ -1,9 +1,9 @@
-import anandImg from '@/assets/anand-quadros.webp';
-import AshokQuadrosImg from '@/assets/ashok-quadros.webp';
-import josephImg from '@/assets/joseph.webp';
-import nehaImg from '@/assets/neha.webp';
-import reubenImg from '@/assets/reuben.webp';
-import teamImg from '@/assets/team-full.webp';
+import anandImg from '@/assets/team/anand-quadros.webp';
+import AshokQuadrosImg from '@/assets/team/ashok-quadros.webp';
+import josephImg from '@/assets/team/joseph.webp';
+import nehaImg from '@/assets/team/neha.webp';
+import reubenImg from '@/assets/team/reuben.webp';
+import teamImg from '@/assets/team/team-full.webp';
 import { motion, stagger, useAnimate, useInView } from 'framer-motion';
 import Image, { StaticImageData } from 'next/image';
 import { useEffect } from 'react';
@@ -27,7 +27,7 @@ const TeamCard = ({
   }
 
   return (
-    <motion.div className="flex flex-col gap-2 p-4 transition-all duration-500 ease-out">
+    <motion.div className="flex flex-col gap-2 p-3 transition-all duration-500 ease-out">
       <div className="group relative overflow-hidden">
         <Image
           src={img!}
@@ -37,7 +37,7 @@ const TeamCard = ({
 
         {/* Overlay that appears on hover */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
-          <p className="text-xs text-white md:text-[13px]">{description}</p>
+          <p className="text-[12px] text-white md:text-[13px]">{description}</p>
         </div>
       </div>
 
@@ -72,9 +72,9 @@ export default function Team() {
   }, [animate, scope, inView]);
 
   return (
-    <div className="container border-none">
+    <div className="container border-none px-0">
       <SectionHeader title="The MultiFlex family: experience, embodied." />
-      <div className="flex w-full flex-col gap-6 md:grid md:grid-cols-2 md:gap-20">
+      <div className="flex w-full flex-col gap-6 lg:grid lg:grid-cols-2 lg:gap-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -157,7 +157,7 @@ export default function Team() {
       </div>
 
       <motion.div
-        className="grid w-full grid-cols-2 md:grid-cols-5"
+        className="grid w-full grid-cols-2  md:grid-cols-3 lg:grid-cols-4 lg:pt-4 xl:grid-cols-5"
         ref={scope}
       >
         <TeamCard
@@ -191,8 +191,8 @@ export default function Team() {
         <TeamCard
           img={nehaImg}
           name="Neha Jhunhunwala Eidnani"
-          designation="Head - Operations"
-          description="With 2 decades of experience, Neha specializes in operations and client interface, leveraging her knowledge of international and domestic markets to ensure project success and client satisfaction."
+          designation="Managing Partner"
+          description="Neha graduated from Kelley School of Business, Indiana USA in Business Management. She worked for A.T. Kearney as a management consultant in Chicago after which she moved to the furniture industry. Neha has over 25 years of experience in India and overseas."
         />
         {/* <TeamCard
           img={glennImg}

@@ -3,7 +3,7 @@ import { FeatureTitle } from '../../features/title';
 
 export default function ExpertiseScroller() {
   const features = [
-    { title: 'Residencies', card: Residencies },
+    { title: 'Residences', card: Residencies },
     { title: 'Commercial Spaces', card: Offices },
     { title: 'Hospitality', card: Hospitability },
   ];

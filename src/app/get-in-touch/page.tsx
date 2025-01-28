@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import contactImage from '~/assets/Picture6.jpg';
+import contactImage from '~/assets/gallery/residences/SAG_1485-Edit-min.webp';
 import { BusinessForm } from '~/components/sections/get-in-touch/business-form';
 import { ContactForm } from '~/components/sections/get-in-touch/contact-form';
 import RoundedButton from '~/components/shared/RoundedButton';

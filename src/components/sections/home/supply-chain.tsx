@@ -9,7 +9,7 @@ import { TextGenerateEffect } from '../../ui/text-generate-effect';
 export default function SupplyChain() {
   return (
     <div className="container">
-      <SectionHeader title="Supply Network" />
+      <SectionHeader title="Value Chain" />
       <div className="md:grid-row-2 flex flex-col gap-5 overflow-clip md:grid md:grid-cols-2">
         <motion.div
           initial={{ clipPath: 'polygon(100% 0, 100% 0, 0 0, 0 0)' }}

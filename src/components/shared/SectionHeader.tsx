@@ -2,9 +2,13 @@ import { motion } from 'framer-motion';
 
 interface ISectionHeaderProps {
   title: string;
+  className?: string;
 }
 
-export default function SectionHeaderText({ title }: ISectionHeaderProps) {
+export default function SectionHeaderText({
+  title,
+  className,
+}: ISectionHeaderProps) {
   return (
     <motion.h3
       initial={{ opacity: 0, y: -10, filter: 'blur(4px)' }}
@@ -14,7 +18,7 @@ export default function SectionHeaderText({ title }: ISectionHeaderProps) {
         ease: 'easeInOut',
       }}
       viewport={{ once: true }}
-      className="text-balance"
+      className={`text-balance ${className}`}
     >
       {title}
     </motion.h3>

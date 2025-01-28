@@ -32,7 +32,7 @@ export const FeatureTitle = ({ children, title }: FeatureTitleProps) => {
       ref={ref}
       className={classnames(
         'w-fit pb-20 text-6xl font-bold tracking-tighter transition-colors',
-        isInView ? 'text-black' : 'text-gray-300',
+        isInView ? 'text-white' : 'text-white/10',
       )}
     >
       <p className="py-20">{children}</p>
