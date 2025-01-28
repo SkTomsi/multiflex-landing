@@ -10,6 +10,14 @@ import Commercial9 from '@/assets/gallery/commercial/IMG_1165-min.webp';
 import Commercial10 from '@/assets/gallery/commercial/IMG_1176-min.webp';
 import Commercial11 from '@/assets/gallery/commercial/IMG_1199 (1)-min.webp';
 
+import Hospitality1 from '@/assets/gallery/hospitality/1.webp';
+import Hospitality2 from '@/assets/gallery/hospitality/2.webp';
+import Hospitality3 from '@/assets/gallery/hospitality/3.webp';
+import Hospitality4 from '@/assets/gallery/hospitality/4.webp';
+import Hospitality5 from '@/assets/gallery/hospitality/5.webp';
+import Hospitality6 from '@/assets/gallery/hospitality/6.webp';
+import Hospitality9 from '@/assets/gallery/hospitality/7.webp';
+
 import Hospitality7 from '@/assets/gallery/hospitality/IMG_9265.webp';
 import Hospitality8 from '@/assets/gallery/hospitality/IMG_9273.webp';
 
@@ -40,17 +48,27 @@ export const GalleryImages = {
     Residence11,
   ],
   commercial: [
+    Commercial11,
     Commercial3,
+    Commercial10,
     Commercial1,
+    Commercial9,
     Commercial2,
     Commercial4,
+    Commercial8,
     Commercial5,
     Commercial6,
     Commercial7,
-    Commercial8,
-    Commercial9,
-    Commercial10,
-    Commercial11,
   ],
-  hospitality: [Hospitality7, Hospitality8],
+  hospitality: [
+    Hospitality1,
+    Hospitality2,
+    Hospitality7,
+    Hospitality8,
+    Hospitality3,
+    Hospitality4,
+    Hospitality5,
+    Hospitality6,
+    Hospitality9,
+  ],
 };

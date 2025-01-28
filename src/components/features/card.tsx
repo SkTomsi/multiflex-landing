@@ -1,7 +1,7 @@
 'use client';
 
 import OImage from '@/assets/IDFCCONF.webp';
-import RImage from '@/assets/gallery/residences/410_Pavlova_05-min.webp';
+import RImage from '@/assets/gallery/residences/residence.jpg';
 import HImage from '@/assets/hosp-main.jpg';
 import classNames from 'classnames';
 import Image from 'next/image';

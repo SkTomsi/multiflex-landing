@@ -37,7 +37,7 @@ const TeamCard = ({
 
         {/* Overlay that appears on hover */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
-          <p className="text-[12px] text-white md:text-[13px]">{description}</p>
+          <p className="text-[11px] text-white md:text-[13px]">{description}</p>
         </div>
       </div>
 

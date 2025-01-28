@@ -1,6 +1,4 @@
-import factory1 from '@/assets/factory/_A1_3055-min.webp';
-import factory2 from '@/assets/factory/_A1_3093-min.webp';
-import heroImg from '@/assets/hero-image-WWD.webp';
+import factory1 from '@/assets/factory/_A1_3033 1-min.webp';
 import suppliersM from '@/assets/suppliers-mobile.png';
 import suppliers from '@/assets/suppliers.png';
 import Image from 'next/image';
@@ -30,13 +28,13 @@ export default function page() {
                 className="h-full object-cover"
               />
             </div>
-            <div className="w-full items-end  lg:-ml-10 lg:mt-40">
+            {/* <div className="w-full items-end  lg:-ml-10 lg:mt-40">
               <Image
                 src={factory2}
                 alt="shirt"
                 className="h-full object-cover"
               />
-            </div>
+            </div> */}
           </div>
           <div className="mt-8 flex flex-grow flex-col gap-4 px-4 lg:mt-0 lg:w-[50%]">
             <div className="flex flex-col gap-y-2">
@@ -116,7 +114,7 @@ Our global supplier network enables us to access a wide range of hardware, mater
         </div>
       </div>
 
-      <Image src={heroImg} alt="shirt" className="w-full object-contain" />
+      {/* <Image src={heroImg} alt="shirt" className="w-full object-contain" /> */}
     </div>
   );
 }
