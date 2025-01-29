@@ -34,7 +34,7 @@ export function Gallery() {
       <div className="mt-20 grid grid-cols-1 gap-20 md:grid-cols-1 lg:grid-cols-3">
         <div className="grid h-fit gap-6 md:gap-12">
           <p className="w-full text-center font-bold tracking-tight text-brand-primary">
-            Residencial Spaces
+            RESIDENCES
           </p>
           {GalleryImages.residences.map((image, i) => (
             <Image
@@ -47,7 +47,7 @@ export function Gallery() {
         </div>
         <div className="grid h-fit gap-6 sm:mt-20 md:gap-12">
           <p className="w-full text-center font-bold tracking-tight text-brand-primary">
-            Commercial Spaces
+            COMMERCIAL SPACES
           </p>
           {GalleryImages.commercial.map((image, i) => (
             <Image
@@ -60,7 +60,7 @@ export function Gallery() {
         </div>
         <div className="grid h-fit gap-6 md:gap-12 ">
           <p className="w-full text-center font-bold tracking-tight text-brand-primary">
-            Hospitality
+            HOSPITALITY
           </p>
           {GalleryImages.hospitality.map((image, i) => (
             <Image

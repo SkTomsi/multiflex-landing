@@ -75,7 +75,7 @@ export default function History() {
               filter={false}
               animation={false}
               duration={0.8}
-              words="Founded by brothers Anand and Ashok Quadros, our journey began with the formation of the Quadros group in 1989. Like you, we believe in the importance of family. Which is why we remain proudly family-run, well into our fourth decade."
+              words="Founded by brothers Anand and Ashok Quadros, our journey began with the formation of the Quadros group in 1989. We remain proudly family-run, well into our fourth decade."
             />
           </div>
 

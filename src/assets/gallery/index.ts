@@ -17,6 +17,8 @@ import Hospitality4 from '@/assets/gallery/hospitality/4.webp';
 import Hospitality5 from '@/assets/gallery/hospitality/5.webp';
 import Hospitality6 from '@/assets/gallery/hospitality/6.webp';
 import Hospitality9 from '@/assets/gallery/hospitality/7.webp';
+import Hospitality10 from '@/assets/gallery/hospitality/8.webp';
+import Hospitality11 from '@/assets/gallery/hospitality/9.webp';
 
 import Hospitality7 from '@/assets/gallery/hospitality/IMG_9265.webp';
 import Hospitality8 from '@/assets/gallery/hospitality/IMG_9273.webp';
@@ -64,9 +66,11 @@ export const GalleryImages = {
     Hospitality1,
     Hospitality2,
     Hospitality7,
+    Hospitality10,
     Hospitality8,
     Hospitality3,
     Hospitality4,
+    Hospitality11,
     Hospitality5,
     Hospitality6,
     Hospitality9,

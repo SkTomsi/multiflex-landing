@@ -1,5 +1,5 @@
 import LogoImg from '@/assets/Multiflex-white.svg';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 const Footer = () => {
@@ -69,11 +69,13 @@ const Footer = () => {
                   <a href="#" className="mr-2">
                     <Facebook className="h-5 w-5" />
                   </a>
-                  <a href="#" className="mr-2">
+                  <a
+                    href="https://www.instagram.com/multiflexofficial/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mr-2"
+                  >
                     <Instagram className="h-5 w-5" />
-                  </a>
-                  <a href="#">
-                    <Twitter className="h-5 w-5" />
                   </a>
                 </div>
               </div>

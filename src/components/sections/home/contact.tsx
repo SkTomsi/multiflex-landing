@@ -12,7 +12,7 @@ export default function Contact() {
           <h3>Experience The Multiflex Difference</h3>
         </div>
         <div>
-          <p className="sub-header-text md:w-[40%]">
+          <p className="sub-header-text text-brand-black md:w-[40%]">
             Experience the difference that true craftsmanship, innovative
             technology, and a commitment to excellence can make. Choose
             Multiflex for furniture that doesn&apos;t just furnish your space –
@@ -64,7 +64,7 @@ export default function Contact() {
           </p> */}
         </div>
       </div>
-      <div className="space-y-5 px-4 md:flex md:items-center md:gap-28  md:px-14 ">
+      <div className="flex flex-col gap-5 px-4 md:flex-row md:items-center md:gap-28  md:px-14 ">
         <p className="text-xl font-bold text-brand-grey md:text-2xl">
           To discuss a project with us,<br></br> Please get in touch:
         </p>

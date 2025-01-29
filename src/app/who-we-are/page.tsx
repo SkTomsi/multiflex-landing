@@ -1,10 +1,6 @@
 'use client';
 
-import image1 from '@/assets/factory/_A1_3055-min 1.webp';
-import image2 from '@/assets/factory/_A1_3093 1.webp';
-import image3 from '@/assets/factory/_A1_3127-min 1.webp';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Team from '~/components/sections/home/team';
 import { SectionHeader } from '~/components/shared/SectionHeader';
@@ -127,13 +123,8 @@ export default function Page() {
             </h1>
           </div>
           <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:w-[70%] md:flex-1 md:space-y-4 md:text-base">
-            <p className="w-full">
-              Born out of a desire to create, innovate and provide premium
-              furniture solutions in India, MultiFlex was established by
-              brothers Anand and Ashok Quadros in 1989.
-            </p>
             <p className="">
-              We remain proudly independent today, still a family-owned
+              Multiflex remain proudly independent today, still a family-owned
               enterprise, and with the valued trust and patronage of our
               clients, have grown to operate completely in-house manufacturing
               units with state-of-the-art CNC machines from Germany and Italy.
@@ -151,7 +142,7 @@ export default function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+      {/* <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
             <Image
@@ -160,9 +151,6 @@ export default function Page() {
               className="h-full object-cover"
             />
           </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Commerical Spaces
-          </p> */}
         </div>
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
@@ -172,9 +160,6 @@ export default function Page() {
               className="h-full object-cover"
             />
           </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Kitchens
-          </p> */}
         </div>
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
@@ -184,18 +169,13 @@ export default function Page() {
               className="h-full object-cover"
             />
           </div>
-          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
-            Wardrobes
-          </p> */}
         </div>
-      </div>
+      </div> */}
       <div className="minimal-container flex flex-col ">
         <Team />
         <SectionHeader
           title="What drives us"
-          description="Like you, we believe in the importance of family. Which is why we
-          remain proudly family-run, well into our fourth decade. We consider
-          each one of our employees to be family – they’ve grown with us and
+          description="We consider each one of our employees to be family - they’ve grown with us and
           we’ve grown with them. Each of our family at MultiFlex lives and
           breathes these values, every single day."
           subDesc="Our commitment to quality begins at the design stage and extends towards production, assembly and even shipment. Fostering a positive and inclusive work environment allows quality to permeate every single process from the outset. On a technical level, every system and process are reviewed continually."

@@ -21,7 +21,7 @@ export default function page() {
         </h1> */}
         <div className="flex h-full flex-col gap-x-2  lg:w-full lg:flex-row-reverse lg:justify-between lg:gap-x-20 lg:gap-y-10 ">
           <div className="flex min-h-full w-full flex-col gap-4  lg:w-[80%] lg:flex-row lg:gap-0">
-            <div className="w-full lg:mb-40">
+            <div className="h-full w-full lg:mb-40">
               <Image
                 src={factory1}
                 alt="shirt"

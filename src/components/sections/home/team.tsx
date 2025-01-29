@@ -37,7 +37,7 @@ const TeamCard = ({
 
         {/* Overlay that appears on hover */}
         <div className="absolute inset-0 hidden flex-col justify-end bg-gradient-to-t from-black/50 to-transparent p-4 opacity-0  group-hover:flex group-hover:opacity-100">
-          <p className="text-[11px] text-white md:text-[13px]">{description}</p>
+          <p className="text-[10px] text-white md:text-[13px]">{description}</p>
         </div>
       </div>
 
@@ -117,13 +117,10 @@ export default function Team() {
               Ashok’s keen marketing and research insights, Anand’s unparalleled
               supplier database, the production genius of Reuben, Joseph’s
               world-class quality control, Neha’s expertise in Design, the
-              whole-hearted efforts of the rest of our team, and the legacy
-              carried forward by the next generation
+              whole-hearted efforts of the rest of our team and the legacy
+              carried forward by the next generation.
             </p>
-            <p className="">
-              We consider each one of our employees to be family – they’ve grown
-              with us and we’ve grown with them.
-            </p>
+            <p className="">The Multiflex family strives towards excellence.</p>
           </div>
           {/* <motion.div
             className="grid grid-rows-3 gap-y-2"
