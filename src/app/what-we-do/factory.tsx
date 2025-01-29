@@ -1,16 +1,15 @@
 import image1 from '@/assets/factory/_A1_3055-min 1.webp';
+import image6 from '@/assets/factory/_A1_3066-min.webp';
+import image5 from '@/assets/factory/_A1_3082-min.webp';
 import image2 from '@/assets/factory/_A1_3093 1.webp';
-import image3 from '@/assets/factory/_A1_3127-min 1.webp';
+import image3 from '@/assets/factory/_A1_3096-min.webp';
+import image4 from '@/assets/factory/_A1_3115-min.webp';
 import Image from 'next/image';
 import { SectionHeader } from '~/components/shared/SectionHeader';
 
 export default function Factory() {
   return (
     <div className="minimal-container flex flex-col items-center gap-x-2 lg:gap-x-20 lg:gap-y-10 ">
-      <SectionHeader
-        title="Our Factory"
-        description="Lorem ipsum some description about the factory, when it was setup, machines used etc etc"
-      />
       <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
         <div className="relative h-[500px] w-full">
           <div className="h-full w-full ">
@@ -93,13 +92,6 @@ export default function Factory() {
             </p>
 
             <h3 className="mb-2 mt-4 text-base font-extrabold uppercase tracking-tighter text-primary md:text-xl">
-              Conversion of Design Intent to GFC’s
-            </h3>
-            <p className="sub-header-text mb-3">
-              Aluminium processing done on VMC.
-            </p>
-
-            <h3 className="mb-2 mt-4 text-base font-extrabold uppercase tracking-tighter text-primary md:text-xl">
               Robotic Polish
             </h3>
             <p className="sub-header-text mb-3">
@@ -120,6 +112,44 @@ export default function Factory() {
           </div>
         }
       />
+      <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image4}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Commerical Spaces
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image5}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Kitchens
+          </p> */}
+        </div>
+        <div className="relative h-[500px] w-full">
+          <div className="h-full w-full ">
+            <Image
+              src={image6}
+              alt="commercial space"
+              className="h-full object-cover"
+            />
+          </div>
+          {/* <p className="absolute bottom-0 left-[50%] mx-auto mb-7 -translate-x-[50%] transform text-lg font-bold text-white">
+            Wardrobes
+          </p> */}
+        </div>
+      </div>
       <SectionHeader
         title="Standards"
         subComponent={
@@ -165,9 +195,7 @@ export default function Factory() {
             <p className="sub-header-text mb-3">
               There are thousands of different adhesives for different
               applications, and we ensure we tailor the adhesives we use for the
-              perfect application required. For instance, it makes no sense to
-              utilize a Fevicol (water soluble glue) to adhere laminate onto a
-              plywood board, since water will cause delamination in any case!
+              perfect application required.
             </p>
 
             <h3 className="mb-2 mt-4 text-base font-extrabold uppercase tracking-tighter text-primary md:text-xl">
