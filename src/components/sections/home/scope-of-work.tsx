@@ -1,6 +1,6 @@
 import W from '@/assets/hosp-main.jpg';
 import K from '@/assets/IDFCCONF.webp';
-import C from '@/assets/Picture9.jpg';
+import C from '@/assets/gallery/residences/residence.jpg';
 import Image from 'next/image';
 import SectionHeader from '~/components/shared/SectionHeader';
 import { TextGenerateEffect } from '~/components/ui/text-generate-effect';

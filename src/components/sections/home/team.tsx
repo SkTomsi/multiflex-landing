@@ -118,7 +118,7 @@ export default function Team() {
               supplier database, the production genius of Reuben, Joseph’s
               world-class quality control, Neha’s expertise in Design, the
               whole-hearted efforts of the rest of our team and the legacy
-              carried forward by the next generation. The Multiflex family
+              carried forward by the next generation, the Multiflex family
               strives towards excellence.
             </p>
           </div>
