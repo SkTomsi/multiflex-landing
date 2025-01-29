@@ -4,6 +4,7 @@ import suppliersM from '@/assets/suppliers-mobile.png';
 import suppliers from '@/assets/suppliers.png';
 import Image from 'next/image';
 import { SectionHeader } from '~/components/shared/SectionHeader';
+import Factory from './factory';
 
 export default function page() {
   //TODO: Change bottom image
@@ -113,8 +114,8 @@ Our global supplier network enables us to access a wide range of hardware, mater
             className="block w-full object-contain sm:hidden"
           />
         </div>
+        <Factory />
       </div>
-
       <Image src={heroImg} alt="shirt" className="w-full object-contain" />
     </div>
   );
