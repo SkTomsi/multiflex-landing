@@ -1,4 +1,5 @@
 import factory1 from '@/assets/factory/_A1_3033 1-min.webp';
+import heroImg from '@/assets/factory/_A1_3119.webp';
 import suppliersM from '@/assets/suppliers-mobile.png';
 import suppliers from '@/assets/suppliers.png';
 import Image from 'next/image';
@@ -114,7 +115,7 @@ Our global supplier network enables us to access a wide range of hardware, mater
         </div>
       </div>
 
-      {/* <Image src={heroImg} alt="shirt" className="w-full object-contain" /> */}
+      <Image src={heroImg} alt="shirt" className="w-full object-contain" />
     </div>
   );
 }

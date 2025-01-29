@@ -19,10 +19,10 @@ export default function HomePage() {
   return (
     <div className="relative mx-0 flex flex-col items-center">
       <Hero scrollYProgress={scrollYProgress} />
-      <Clients />
       <SupplyChain />
       <ScopeOfWork />
       <History />
+      <Clients />
       {/* <Projects /> */}
       {/* <Team /> */}
       <Contact />

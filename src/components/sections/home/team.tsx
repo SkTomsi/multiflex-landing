@@ -105,7 +105,7 @@ export default function Team() {
             
             Like you, we believe in the importance of family. Which is why we remain proudly family-run, well into our fourth decade. With Ashok’s keen marketing and research insights, Anand’s unparalleled supplier database, the production genius of Reuben, Joseph’s world-class quality control, Neha’s expert marketing, the whole-hearted efforts of the rest of our team, and the legacy carried forward by the next generation"
           /> */}
-          <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:flex-1 md:space-y-4 md:text-base">
+          <div className="sub-header-text mt-5 flex flex-col space-y-2 md:mt-0 md:flex-1 md:space-y-4 md:text-base lg:items-center">
             <p className="w-full">
               At Multiflex, we believe that our team is our greatest asset. Our
               success story is written by the hands and minds of dedicated
@@ -118,9 +118,9 @@ export default function Team() {
               supplier database, the production genius of Reuben, Joseph’s
               world-class quality control, Neha’s expertise in Design, the
               whole-hearted efforts of the rest of our team and the legacy
-              carried forward by the next generation.
+              carried forward by the next generation. The Multiflex family
+              strives towards excellence.
             </p>
-            <p className="">The Multiflex family strives towards excellence.</p>
           </div>
           {/* <motion.div
             className="grid grid-rows-3 gap-y-2"
@@ -187,7 +187,7 @@ export default function Team() {
         {/* <TeamCard isEmpty /> */}
         <TeamCard
           img={nehaImg}
-          name="Neha Jhunhunwala Eidnani"
+          name="Neha Jhunjhunwala Eidnani"
           designation="Managing Partner"
           description="Neha graduated from Kelley School of Business, Indiana USA in Business Management. She worked for A.T. Kearney as a management consultant in Chicago after which she moved to the furniture industry. Neha has over 25 years of experience in India and overseas."
         />
